@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <hr>
+    <form action="../Sucess.html" method="get">
+    <label for="sname" title="student name">Student Name</label>
+    <input type="text" placeholder="Enter Your Name" id="sname" title="student name" name="Student Name">
+    <br><br>
+    <label for="fname" title="father name">Father Name</label>
+    <input type="text" placeholder="Enter Your Father Name" id="fname" title="father name" name="Father Name">
+    <br><br>
+    <label for="mname" title="mother name">Mother Name</label>
+    <input type="text" placeholder="Enter Your Mother Name" id="mname" title="mother name" name="Mother Name">
+    <br><br>
+    <label for="email" title="email">Email</label>
+    <input type="email" name="Email" id="email" title="email" placeholder="Enter Your Mail">
+    <br><br>
+    <label for="phone" title="phone number">Phone Number</label>
+    <input type="tel" name="Phone Number" id="phone" title="phone number" placeholder="Enter your Phone Number">
+    <br><br>
+    <label for="pass" title="password">Password</label>
+    <input type="password" name="Password" id="pass" title="password" placeholder="Enter your Password">
+    <br><br>
+    <label for="dob" title="date of birth">Date Of Birth</label>
+    <input type="date" title="date of birth" name="Date Of Birth" id="dob">
+    <br><br>
+    <label for="fcolor" title="favorite color">Favorite Color</label>
+    <input type="color" name="Favorite Color" id="fcolor" title="favorite color">
+    <br><br>
+    <label for="upload photo">Upload Photo</label>
+    <input type="file" name="Upload Photo" id="upload photo">
+    <br><br>
+    <label for="male">
+        <input type="radio" name="Gender" id="male" value="Male" checked> Male 
+    </label>
+    <label for="female">
+        <input type="radio" name="Gender" id="female" value="Female"> Female 
+    </label>
+    <label for="other">
+        <input type="radio" name="Gender" id="other" value="Other"> Other 
+    </label>
+    
+    <br><br>
+   <h2>Skills</h2>
+    <label for="html"><input id="html" type="checkbox" name="Skills" value="Html">
+        Html
+    </label>
+    <br>
+    <label for="css"><input id="css" type="checkbox" name="Skills" value="Css">
+        Css
+    </label>
+    <br>
+    <label for="js"><input id="js" type="checkbox" name="Skills" value="Js">
+        Js
+    </label>
+    <br>
+    <label for="python"><input id="python" type="checkbox" name="Skills" value="Python">
+        Python
+    </label>
+    
+    <br><br>
+    <label for="course">Courses</label>
+    <br>
+    <select name="course" id="course">
+            <option value="Mern">MERN</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+    </select>
+    <br><br>
+    <label for="address">Address</label>
+    <br>
+    <textarea name="Address" id="address" placeholder="Enter your Address " required rows="5" cols="15"></textarea>
+    <br><br>
+    
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

@@ -14,7 +14,562 @@
         <input type="email" name="email" id="name">
         <button>Submit</button>
     </form>
-
     <!--Newer version we use Placeholder-->
+    <!--Roadmap (Forms)
+
+Hum is order me padhenge:
+
+Part 1 (Aaj)
+✅ <form>
+✅ action
+✅ method
+✅ <label>
+✅ <input>
+✅ type="text"
+Part 2
+password
+email
+number
+tel
+date
+time
+datetime-local
+Part 3
+radio
+checkbox
+Part 4
+file
+color
+range
+search
+url
+Part 5
+textarea
+select
+option
+optgroup
+Part 6
+button
+submit
+reset
+Part 7
+
+Validation
+
+required
+placeholder
+readonly
+disabled
+maxlength
+minlength
+min
+max
+step
+pattern
+autocomplete
+Part 8
+
+Mini Projects
+
+Login Page
+Registration Form
+College Admission Form
+Job Application Form
+Contact Us
+Survey Form-->
+<br>
+<hr>
+<br>
+
+<form></form><!--Syntax of form-->
+<form>
+    Name
+    <input><!--Box Input-->
+    <input type="text"><!--Type which type of input should be taken from the user so , we use type attribute-->
+    <br><br>
+    <hr>
+    <form action=""></form>
+    <!--After taking the the data from the user the data where to send the data that working pricniple of a action attribute -->
+    <!--It tells the address to the browser-->
+    <!--Real Life Example
+
+Socho tum Post Office gaye.
+
+Ek letter likha.
+
+Ab envelope pe address hi nahi likha.
+
+To:
+
+_________
+
+Kya postman deliver karega?
+
+❌ Nahi.
+
+Usko address chahiye.
+
+HTML me
+
+Address
+
+ko bolte hain
+
+action=""-->
+<br><br>
+<hr>
+<form action="Sucess.html">
+Name
+<input type="text">
+<input type="submit">
+
+</form>
+</form>
+
+<!--Ab sabse important baat.
+HTML sirf Frontend hai.
+
+HTML data collect karta hai.
+
+Backend data process karta hai.
+
+action dono ko connect karta hai.-->
+<!--method-->
+<!--it is a attribute of a form tag-->
+<!--Simple Definition
+action
+
+WHERE?
+
+Data kahan jayega?
+
+login.html
+method
+
+HOW?
+
+Data kis tarike se jayega?
+
+GET
+
+ya
+
+POST
+Real Life Example
+
+Socho tum courier bhej rahe ho.
+
+Question 1
+
+Address kya hai?
+
+Bangalore
+
+Ye hai
+
+action
+Question 2
+
+Courier bhejna kaise hai?
+
+Normal Delivery
+
+ya
+
+Speed Post
+
+Ye hai
+
+method-->
+<!--GET & POST-->
+
+<!--GET Method
+
+Example
+
+<form action="login.html"
+method="get">
+
+Suppose user likhta hai
+
+Name
+
+Amrutanshu
+
+Browser data ko URL me add kar deta hai.
+
+Example
+
+login.html?name=Amrutanshu
+
+Yahan dekho
+
+?name=Amrutanshu
+
+Ye URL me dikh raha hai.
+
+Isliye GET me data visible hota hai.
+
+POST Method
+
+Example
+
+<form action="login.html"
+method="post">
+
+Ab
+
+Name
+
+↓
+
+Amrutanshu
+
+↓
+
+Submit
+
+Browser URL me kuch nahi dikhata.
+
+Sirf
+
+login.html
+
+Data background me server ko bhejta hai.
+
+Difference
+GET
+URL
+
+↓
+
+login.html?name=Rahul
+
+Data visible.
+
+POST
+URL
+
+↓
+
+login.html
+
+Data hidden.
+
+Real Website
+Google Search
+
+Tum Google pe search karte ho
+
+HTML Tutorial
+
+URL ban jata hai
+
+https://www.google.com/search?q=HTML+Tutorial
+
+Dekha?
+
+Search word URL me aa gaya.
+
+Ye GET ka example hai-->
+<!--Kab GET?
+Search Box
+Filter
+Sorting
+Public Information
+Kab POST?
+Login
+Signup
+Registration
+Payment
+Contact Form
+Password-->
+<form action="Sucess.html" method="get">
+    name
+    <input type="text">
+    <input type="password">
+    <input type="submit">
+</form>
+
+<!--label-->
+<!--Agar for aur id na ho
+<label>Name</label>
+
+<input type="text">
+
+Output:
+
+Name
+
+[__________]
+
+Ye bhi chalega.
+
+Lekin...
+
+Agar tum Name par click karoge,
+
+❌ Cursor input me nahi aayega.
+
+Agar for aur id ho
+<label for="name">Name</label>
+
+<input id="name" type="text">
+
+Ab
+
+Name par click karo.
+
+👇
+
+Cursor automatically box me aa jayega.
+
+Yehi for aur id ka magic hai.
+
+Real Life Example
+
+Socho classroom me 50 students hain.
+
+Teacher chillata hai:
+
+"Rahul!"
+
+Sirf Rahul khada hota hai.
+
+Kyun?
+
+Kyuki Rahul ka naam unique identity hai.
+
+HTML me bhi waise hi:
+
+id="email"
+
+Ye us input ki identity hai.
+
+Aur
+
+for="email"
+
+Label bolta hai:
+
+"Main Email wale input ke liye hoon."-->
+<form action="#">
+    <label for=""></label>
+</form>
+<!--Input-->
+<!--Input kya hai?
+
+Input matlab
+
+User se data lene ka box.
+
+Example
+
+<input type="text">
+
+Output
+
+______________
+
+Yahan user kuch type karega.
+
+Input Empty Tag hai
+<input>
+
+✔ Correct
+
+<input></input>
+
+❌ Wrong
+
+Input ke andar koi content nahi hota.
+
+type Attribute
+
+Question
+
+Browser ko kaise pata chalega ki box kis cheez ka hai?
+
+Isliye
+
+type=""
+
+likhte hain.
+
+Example
+<input type="text">
+
+Matlab
+
+Simple text.
+
+<input type="password">
+
+Matlab
+
+Password box.
+
+<input type="email">
+
+Matlab
+
+Email.
+
+<input type="tel">
+
+Matlab
+
+Phone Number.
+
+Isliye
+<input type="text">
+
+me
+
+text
+
+ek value hai.
+
+Aur
+
+type
+
+ek attribute.-->
+
+<!-------------------Placeholder-------------------->
+
+<!----------------------------------Chapter 3: placeholder
+
+Sabse pehle ye dekho.
+
+<input type="text">
+
+Output
+
+____________
+
+User ko idea nahi hai kya likhna hai.
+
+Ab
+
+<input
+type="text"
+placeholder="Enter Your Name">
+
+Output
+
+Enter Your Name
+
+Light grey color me.
+
+Placeholder kya hai?
+
+Ye ek hint hota hai.
+
+Jo user ko batata hai
+
+Yahan kya type karna hai.
+
+Example
+
+Name
+
+<input
+type="text"
+placeholder="Enter Name">
+
+Email
+
+<input
+type="email"
+placeholder="Enter Email">
+
+Password
+
+<input
+type="password"
+placeholder="Enter Password">
+
+Phone
+
+<input
+type="tel"
+placeholder="Enter Phone Number">
+Placeholder kab gayab hota hai?
+
+Jaise hi tum typing start karte ho.
+
+Example
+
+Before typing
+
+Enter Name
+
+Typing start
+
+A
+
+Placeholder gayab.
+
+Label vs Placeholder
+
+Ye interview me bhi poocha ja sakta hai.
+
+Label	Placeholder
+Input ka permanent naam hota hai	Sirf ek hint hota hai
+Hamesha dikhta hai	Typing shuru hote hi gayab ho jata hai
+Accessibility ke liye important	User guidance ke liye
+Professional Form
+<form>
+
+<label for="name">Name</label>
+
+<br>
+
+<input
+id="name"
+type="text"
+placeholder="Enter Your Name">
+
+<br><br>
+
+<label for="email">Email</label>
+
+<br>
+
+<input
+id="email"
+type="email"
+placeholder="Enter Your Email">
+
+<br><br>
+
+<label for="password">Password</label>
+
+<br>
+
+<input
+id="password"
+type="password"
+placeholder="Enter Password">
+
+</form>
+Real Website Flow
+Name
+[Enter Your Name]
+
+↓
+
+Email
+[Enter Your Email]
+
+↓
+
+Password
+[Enter Password]
+
+↓
+
+Submit-->
 </body>
 </html>

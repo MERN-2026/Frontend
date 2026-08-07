@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | Form</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <h1>Student Registration Form</h1>
+    <form action="Sucess.html" method="get">
+        <label for="sname">Student Name</label>
+        <input id="sname" type="text" placeholder="Enter Your Name">
+        <br>
+        <br>
+        <label for="fname">Father Name</label>
+        <input id="fname" type="text" placeholder="Enter Your Father Name">
+        <br><br>
+        <label for="mname">Mother name</label>
+        <input id="mname" type="text" placeholder="Enter Your Mother Name">
+        <br><br>
+        <label for="mail">Email</label>
+        <input id="mail" type="email" placeholder="Enter Your Mail">
+        <br><br>
+        <label for="mobilenumber">Phone Number</label>
+        <input id="mobilenumber" type="tel" placeholder="Enter Your Phone Number">
+        <br><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <!----------✅ password
+email (deeply)
+number
+tel (deeply)
+date
+time
+datetime-local
+radio
+checkbox
+file
+color
+range
+search
+url----------->
+
+<!--Password
+
+type="text" displays whatever the user types.
+
+type="password" hides the characters typed by the user by showing dots or asterisks (•••• or ****).
+
+->We use type="password" because it hides the password on the screen, protecting the user's privacy from people nearby.
+-->
+
+
+<!--Chapter: type="email"
+Syntax
+<input type="email">
+Kyu use karte hain?
+
+Agar tum likho:
+
+<input type="text">
+
+User kuch bhi likh sakta hai.
+
+abcd
+123
+@@@@
+hello
+
+Browser kuch nahi bolega.
+
+Lekin
+
+<input type="email">
+
+Browser samajhta hai:
+
+"Yahan Email ID aani chahiye."
+
+Valid examples:
+
+abc@gmail.com
+user@yahoo.com
+
+Invalid examples:
+
+amrutanshu
+gmail.com
+abc@
+Real Form
+<label for="email">Email</label>
+
+<input
+id="email"
+type="email"
+placeholder="Enter Your Email">
+Browser Validation
+<form>
+
+<input type="email">
+
+<input type="submit">
+
+</form>
+
+Agar user likhe
+
+amrutanshu
+
+to browser warning de sakta hai:
+
+Please include an '@' in the email address.
+
+Difference
+<input type="text">
+
+✔ Any text
+
+<input type="email">
+
+✔ Email format
+
+Next: type="tel"
+<input type="tel">
+
+Phone number ke liye use hota hai.
+
+Example
+
+<label for="phone">Phone</label>
+
+<input
+id="phone"
+type="tel"
+placeholder="Enter Phone Number">
+Next: type="number"
+<input type="number">
+
+Sirf numbers ke liye.
+
+Example
+
+<label for="age">Age</label>
+
+<input
+id="age"
+type="number"
+placeholder="Enter Age">
+Next: type="date"
+<input type="date">
+
+Output:
+
+📅 Calendar open hota hai.
+
+Example
+
+<label for="dob">Date of Birth</label>
+
+<input
+id="dob"
+type="date">
+Next: type="time"
+<input type="time">
+
+Time picker open hota hai.
+
+Next: type="color"
+<input type="color">
+
+🎨 Color picker open hota hai.
+
+Next: type="file"
+<input type="file">
+
+File upload karne ke liye.
+
+Next: type="radio"
+<input type="radio">
+
+Ek option select karne ke liye.
+
+Example:
+
+Male
+Female
+
+Sirf ek choose hoga.
+
+Next: type="checkbox"
+<input type="checkbox">
+
+Multiple options select kar sakte ho.
+
+Example:
+
+HTML ✔
+CSS ✔
+JS ✔
+Next: type="submit"
+<input type="submit">
+
+Form submit karta hai.
+
+Input Types Summary
+Type	Use
+text	Normal text
+password	Hide password
+email	Email input
+tel	Phone number
+number	Numbers
+date	Date picker
+time	Time picker
+color	Color picker
+file	Upload file
+radio	One option
+checkbox	Multiple options
+submit	Submit form-->
+
+<br>
+<br>
+<hr>
+<!--Home work-->
+<h1>Form</h1>
+<form action="Sucess.html" method="get">
+    <label for="name">Name</label>
+    <input type="text" placeholder="" id="">
+    <input type="email">
+    <input type="password">
+    <input type="tel">
+    <input type="number">
+    <input type="date">
+    <input type="time">
+    <!-- <input type="datetime"> Previouslly we used this to show the date and time simuntaneously-->
+    <input type="datetime-local">
+    <input type="color">
+    <input type="file">
+    <br><br><br>
+    
+<form action="Sucess.html" method="get">
+
+    <label for="">Male</label>
+    <input type="radio" name="" id="">
+
+    <label for="">Female</label>
+    <input type="radio" name="" id="">
+
+    <!---------------Pehla Program
+<label>Male</label>
+<input type="radio">
+
+<br>
+
+<label>Female</label>
+<input type="radio">
+Output
+Male   ( )
+
+Female ( )
+
+Ab problem dekho.
+
+Agar Male select karoge
+
+(●) Male
+
+( ) Female
+
+Aur phir Female select karoge
+
+(●) Male
+
+(●) Female
+
+😲 Dono select ho gaye!
+
+Ye galat hai.
+
+Is problem ka solution kya hai?
+name Attribute
+<input type="radio" name="gender">
+
+Aur
+
+<input type="radio" name="gender">
+
+Dono ka name same hona chahiye.
+
+Complete Code
+<label for="male">Male</label>
+<input id="male" type="radio" name="gender">
+
+<br>
+
+<label for="female">Female</label>
+<input id="female" type="radio" name="gender">
+Output
+
+Ab
+
+(●) Male
+
+( ) Female
+
+Agar Female select karoge
+
+( ) Male
+
+(●) Female
+
+Male automatically unselect ho jayega.
+
+
+name kyu use karte hain?
+
+Browser ko batane ke liye ki
+
+"Ye sab ek hi group ke radio buttons hain."
+
+Isliye browser sirf ek ko select hone deta hai.-->
+
+<!---Agar name alag ho
+<input type="radio" name="gender1">
+
+<input type="radio" name="gender2">
+
+Output
+
+(●) Male
+
+(●) Female
+
+Dono select ho jayenge.-->
+<br><br><br><br>
+
+<label for="male">Male</label>
+<input type="radio" name="gender" id="male">
+<label for="female">Female</label>
+<input type="radio" name="gender" id="female">
+</form>
+<!--Value Attribute
+
+value Attribute (Bahut Important)
+<input
+type="radio"
+name="gender"
+value="Male">
+
+value batata hai ki form submit hone par kaunsi value backend ko bhejni hai.
+
+Example:
+
+<label for="male">Male</label>
+<input
+id="male"
+type="radio"
+name="gender"
+value="Male">
+
+<br>
+
+<label for="female">Female</label>
+<input
+id="female"
+type="radio"
+name="gender"
+value="Female">
+
+Agar user Female select kare aur form submit kare, to backend ko milega:
+
+gender = Female
+-->
+<!--Radio button-->
+<br><br><hr>
+<form action="#" method="get">
+
+    <label for="male">Male</label>
+<input type="radio" name="gender" id="male" value="Male" checked>
+<label for="female">Female</label>
+<input type="radio" name="gender" id="female" value="Female">
+<input type="submit">
+
+<!--Checkd is ued set default value when the page reload-->
+</form>
+
+<form action="">
+    <label for="html">HTML</label>
+    <input  id="html" type="checkbox" name="skills" value="HTML" checked><!--we used name to give to the backend should know which type of skills it is -->
+    <br><br><br>
+    <label for="css">CSS</label>
+    <input id="css" type="checkbox" name="skills" value="CSS" checked>
+    <br><br><br>
+    <label for="">JS</label>
+    <input type="checkbox" name="skills" value="JS">
+    <br><br><br>
+    <label for="">DB</label>
+    <input type="checkbox" name="skills" value="DB">
+    <br><br><br>
+    <input type="submit">
+</form>
+
+</form>
+
+<!--Select  dropdown-->
+<form action="">
+<select name="" id="">
+<option value="">INDIA</option>
+<option value="">USA</option>
+<option value="">JAPAN</option>
+</select>
+</form>
+
+<!--Text area-->
+<form action="">
+    <textarea name="" id="">
+    </textarea>
+</form>
+
+
+<!----required
+readonly
+disabled
+maxlength
+minlength
+min
+max
+step
+checked
+selected
+multiple
+accept
+autocomplete
+autofocus-->
+
+<!--1️⃣ required Attribute (Masterclass)
+Syntax
+<input type="text" required>
+required kya hai?
+
+👉 required ek boolean attribute hai.
+
+Boolean attribute ka matlab:
+
+Agar attribute likh diya → ON
+Agar nahi likha → OFF
+
+Example:
+
+<input type="text" required>
+
+Ya
+
+<input type="text" required="required">
+
+Dono same hain.
+
+required kyu use karte hain?
+
+Jab tum chahte ho ki user ye field bharna hi pade, tab required use karte hain.
+
+Example:
+
+Registration Form
+
+<label for="name">Name</label>
+
+<input
+id="name"
+type="text"
+required>
+
+Agar user Name khali chhodkar Submit karega,
+
+Browser bolega:
+
+Please fill out this field.
+
+Form submit nahi hoga.
+
+Without required
+<input type="text">
+
+User kuch bhi na likhe aur Submit kare.
+
+✔ Form submit ho jayega.
+
+With required
+<input type="text" required>
+
+User khali chhod de.
+
+❌ Form submit nahi hoga.
+
+Real-Time Examples
+Login Form
+<label for="email">Email</label>
+
+<input
+id="email"
+type="email"
+required>
+
+Email bharna zaroori hai.
+
+Password
+<label for="password">Password</label>
+
+<input
+id="password"
+type="password"
+required>
+
+Password bhi mandatory hai.
+
+Complete Example
+<form action="success.html">
+
+<label for="name">Name</label>
+<input
+id="name"
+type="text"
+required>
+
+<br><br>
+
+<label for="email">Email</label>
+<input
+id="email"
+type="email"
+required>
+
+<br><br>
+
+<input type="submit">
+
+</form>
+Kis-kis ke saath use hota hai?
+
+✔ Text
+
+<input type="text" required>
+
+✔ Email
+
+<input type="email" required>
+
+✔ Password
+
+<input type="password" required>
+
+✔ Date
+
+<input type="date" required>
+
+✔ File
+
+<input type="file" required>
+
+✔ Radio
+
+<input type="radio" name="gender" required>
+
+✔ Checkbox
+
+<input type="checkbox" required>
+Interview Definition
+
+The required attribute makes an input field mandatory. The browser prevents form submission until the user fills the field.
+
+Yaad Rakhne ki Trick
+
+Required = Mandatory
+
+Jaise college admission form me Name aur Email compulsory hote hain.
+
+Waise hi HTML me:
+
+required
+Mini Project
+<form action="success.html">
+
+<label for="name">Name</label>
+<input
+id="name"
+type="text"
+required>
+
+<br><br>
+
+<label for="email">Email</label>
+<input
+id="email"
+type="email"
+required>
+
+<br><br>
+
+<label for="password">Password</label>
+<input
+id="password"
+type="password"
+required>
+
+<br><br>
+
+<input type="submit">
+
+</form>
+Summary
+Attribute	Purpose
+required	Field ko mandatory banata hai
+Type	Boolean Attribute
+Submit	Khali field hone par form submit nahi hota-->
+
+<form action="Sucess.html">
+
+<label for="name">Name</label>
+<input
+id="name"
+type="text"
+required>
+
+<br><br>
+
+<label for="email">Email</label>
+<input
+id="email"
+type="email"
+required>
+
+<br><br>
+
+<label for="password">Password</label>
+<input
+id="password"
+type="password"
+required>
+
+
+<br><br>
+<input type="text" value="Amrutanshu" readonly>
+<input type="text" value="Amrutanshu" disabled>
+<input type="text" maxlength="10">
+<input type="password" minlength="8">
+<input type="number" min="18">
+<input type="date" min="2026-08-01">
+<input type="number" max="100">
+<input type="number" step="5"><!--Kitne interval me value badhegi.-->
+<input type="checkbox" checked>
+<input type="radio" checked>
+<select>
+    <option>HTML</option>
+    <option selected>CSS</option>
+    <option>JS</option>
+</select>
+<input type="file" multiple><!--Ek se zyada values select karne ke liye.-->
+<select multiple>
+
+    <option value="">dhkfdjff</option>
+    <option value="">dfsddfssfd</option>
+    <option value="">fssdf</option>
+    <option value="">fsd</option>
+    <option value="">fssdsdf</option>
+</select><!--Dropdown me bhi use hota hai.-->
+
+
+<input type="file" accept=".pdf"><!--Kaunsi file upload hogi.-->
+<input type="file" accept="image/*"><!--Sirf images-->
+
+<input
+type="email"
+autocomplete="on"><!--Browser automatically purani information suggest kare.-->
+
+<input
+type="text"autofocus><!--Page load hote hi cursor us field me aa jata hai.-->
+
+
+<input type="submit">
+
+</form>
+
+<br><br><br><br>
+
+
+<hr>
+<br>
+<form action="success.html" method="get">
+
+<label>Name</label>
+<input
+type="text"
+required
+maxlength="20"
+autofocus>
+
+<br><br>
+
+<label>Email</label>
+<input
+type="email"
+required
+autocomplete="on">
+
+<br><br>
+
+<label>Password</label>
+<input
+type="password"
+required
+minlength="8">
+
+<br><br>
+
+<label>Age</label>
+<input
+type="number"
+min="18"
+max="60">
+
+<br><br>
+
+<label>Resume</label>
+<input
+type="file"
+accept=".pdf">
+
+<br><br>
+
+<label>Skills</label>
+
+<input
+type="checkbox"
+checked> HTML
+
+<input
+type="checkbox"> CSS
+
+<br><br>
+
+<label>Gender</label>
+
+<input
+type="radio"
+name="gender"
+checked> Male
+
+<input
+type="radio"
+name="gender"> Female
+
+<br><br>
+
+<input type="submit">
+
+</form>
+<hr>
+
+<!--| Attribute      | Use                              |
+| -------------- | -------------------------------- |
+| `required`     | Field mandatory                  |
+| `readonly`     | Read only, submit hota hai       |
+| `disabled`     | Disable, submit nahi hota        |
+| `maxlength`    | Maximum characters               |
+| `minlength`    | Minimum characters               |
+| `min`          | Minimum number/date              |
+| `max`          | Maximum number/date              |
+| `step`         | Number increment                 |
+| `checked`      | Default radio/checkbox selected  |
+| `selected`     | Default dropdown option          |
+| `multiple`     | Multiple files/options select    |
+| `accept`       | File type restriction            |
+| `autocomplete` | Browser suggestions on/off       |
+| `autofocus`    | Cursor automatically us field me |
+-->
+</body>
+</html>

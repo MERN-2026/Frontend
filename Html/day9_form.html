@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!--Ab Forms me bas kuch important topics bache hain:
+
+<select>
+<option>
+<optgroup>
+<textarea>
+<button>
+name attribute (backend ke liye bahut important)-->
+<form action="Sucess.html" method="get">
+ <select name="" id="" multiple></select><!--To creat the dropdown box we use select tag-->
+ <label for="course">Course</label>
+ <select name="Course" id="course">
+    <option value="HTML">HTML</option><!--To show the option inside the drop doen box we creat option tag-->
+    <option value="CSS" selected>CSS</option><!--To show the option inside the drop doen box we creat option tag-->
+    <option value="JS">Js</option><!--To show the option inside the drop doen box we creat option tag-->
+ </select>
+ <input type="submit">
+ </form>
+
+ <!--Interview Definition
+
+The <select> tag is used to create a drop-down list, and the <option> tag is used to define the items inside the drop-down list.-->
+
+
+    <!----📚 Chapter: <textarea> Tag
+<textarea> kya hai?----->
+
+   <!---Interview Definition
+
+The <textarea> tag is used to create a multi-line text input field where users can enter large amounts of text.--> 
+<br><br>
+    <form action="Sucess.html" method="get">
+        <label for="address">Address</label>
+        <textarea name="Adress" id="address" value="dress" rows="7" cols="28" placeholder="Enter your fulll Address" required  minlength="4" maxlength="10" readonly disabled >
+</textarea>
+
+<br><br><br>
+<input type="submit">
+   </form>
+
+
+
+
+
+   <!--📚 Chapter: <button> Tag--->
+<!----<button> kya hai?
+
+<button> ka use webpage par button banane ke liye hota hai.-->
+
+    <!---Interview Definition
+
+The <button> tag is used to create clickable buttons. It can be used as a submit button, reset button, or a normal button depending on its type attribute.-->
+
+    <!--Example:
+
+Login
+Register
+Submit
+Save
+Cancel
+Reset-->
+
+<br><br><br>
+
+<form action="Sucess.html" method="get">
+    <label for="name" title="name">Name</label>
+    <input type="text" id="name" title="name" value="" name="">
+    <input
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button">Submit</button>
+    <!--3. type="button"
+
+Ye normal button hota hai.
+
+Khud se kuch nahi karta.
+
+<button type="button">
+Click Me
+</button>
+
+Ye sirf button dikhata hai.
+
+Iska use JavaScript me hota hai.-->
+
+
+<!--NAme And Value attribute-->
+<!--
+id	name
+Unique identity    	Form field ka naam
+CSS aur JavaScript me use hota hai	            Backend        ko data bhejne ke liye
+label for="" ke saath use hota hai	Form submit ke time use hota hai
+Page me unique hona chahiye	Different fields ka alag naam hota hai
+--->
+<form action="success.html" method="get">
+
+<label for="name">
+Name
+</label>
+
+<input
+id="name"
+name="username"
+type="text">
+
+<br><br>
+
+<label for="mail">
+Email
+</label>
+
+<input
+id="mail"
+name="email"
+type="email">
+
+<br><br>
+
+<label>Gender</label>
+
+<input
+type="radio"
+name="gender"
+value="Male"> Male
+
+<input
+type="radio"
+name="gender"
+value="Female"> Female
+
+<br><br>
+
+<label>
+Course
+</label>
+
+<select name="course">
+
+<option value="mern">
+MERN Stack
+</option>
+
+<option value="python">
+Python Full Stack
+</option>
+
+</select>
+
+<br><br>
+
+<input type="submit">
+
+</form>
+</form>
+
+<!--🎯 Interview Definitions
+name
+
+The name attribute identifies a form field and is used to send data to the server when the form is submitted.
+
+value
+
+The value attribute specifies the value of an input field or the data sent to the server for selected options like radio buttons, checkboxes, and dropdowns.
+
+🧠 Easy Trick
+
+Think of it like a dictionary (key-value pair):
+
+name = key
+
+value = value
+
+Example:
+
+username = Amrutanshu
+
+email = abc@gmail.com
+
+gender = Male
+
+course = mern
+
+Yahan:
+
+username, email, gender, course → name
+Amrutanshu, abc@gmail.com, Male, mern → value-->
+
+
+
+
+
+<!---📚 Chapter: <optgroup> Tag--->
+<select name="" id="">
+
+    <optgroup label="Frontend"><!--label Attribute
+
+<optgroup> me sabse important attribute hai:
+
+label=""
+
+Ye group ka naam batata hai.
+
+Example
+
+<optgroup label="Frontend">
+
+Output
+
+▼ Frontend
+    HTML
+    CSS
+    JavaScript-->
+    
+        <option value="">HTML</option>
+        <option value="">CSS</option>
+        <option value="">JS</option>
+    </optgroup>
+
+    <optgroup label="Backend" disabled>
+        <option value="" selected>Node.js</option>
+        <option value="">Express.js</option>
+    </optgroup>
+
+    <optgroup label="DB" disabled>
+        <option value="">Mongodb</option>
+    </optgroup>
+</select>
+
+<!--Interview Definition
+
+The <optgroup> tag is used to group related options inside a <select> dropdown. The label attribute provides the name of the group.-->
+
+    
+</body>
+</html>
