@@ -144,3 +144,256 @@ Marks the end of the webpage.-->
 <footer>-->
 
     <!--MDN Refrence-->
+
+
+    <!-- 1️⃣ HTML Element kya hai?
+Definition — English 🇬🇧
+
+An HTML element is a complete HTML structure consisting of a start tag, content, and an end tag, or a self-closing/void tag.
+
+Example:
+
+<p>Hello World</p>
+
+Yahan:
+
+<p>          → Start tag
+Hello World  → Content
+</p>         → End tag
+
+Pura <p>Hello World</p> = Element
+
+Void element
+
+Kuch elements ka closing tag nahi hota:
+
+<img>
+<br>
+<hr>
+<input>
+
+Inhe void elements kehte hain.
+
+2️⃣ HTML Attribute kya hai?
+Definition — English 🇬🇧
+
+An HTML attribute provides additional information or configuration for an HTML element.
+
+Simple:
+
+Attribute element ke baare me extra information deta hai ya uska behavior configure karta hai.
+
+Example:
+
+<input type="text" placeholder="Enter your name">
+
+Yahan:
+
+input       → Element
+type        → Attribute
+"text"      → Attribute value
+
+placeholder → Attribute
+"Enter..."  → Attribute value
+
+Structure:
+
+attribute="value"
+🔥 Tum already bahut attributes padh chuke ho
+
+Example:
+
+<a href="about.html" target="_blank">
+href       → attribute
+target     → attribute
+
+Image:
+
+<img src="photo.jpg" alt="Student Photo" width="300">
+src   → attribute
+alt   → attribute
+width → attribute
+
+Form:
+
+<input type="email" required maxlength="50">
+type      → attribute
+required  → attribute
+maxlength → attribute
+
+So attribute koi alag tag nahi hai.
+
+3️⃣ Block-Level Element
+Definition — English 🇬🇧
+
+A block-level element normally starts on a new line and takes up the available width of its containing element.
+
+Simple:
+
+Block element new line se start hota hai aur normally available width occupy karta hai.
+
+Example:
+
+<h1>Heading</h1>
+<p>Paragraph</p>
+
+Browser concept:
+
+[             Heading             ]
+
+[             Paragraph           ]
+
+Dono alag lines me.
+
+Common Block-Level Elements
+
+Abhi ke HTML knowledge se:
+
+<h1> - <h6>
+<p>
+<div>
+<ul>
+<ol>
+<li>
+<table>
+<form>
+<section>
+<article>
+<header>
+<footer>
+<main>
+<aside>
+<nav>
+<hr>
+
+⚠️ display CSS se behavior change kiya ja sakta hai, isliye ise HTML ka permanent/fixed rule mat samajhna.
+
+4️⃣ Inline Element
+Definition — English 🇬🇧
+
+An inline element normally does not start on a new line and takes up only as much width as its content requires.
+
+Simple:
+
+Inline element same line me reh sakta hai aur normally jitni jagah content ko chahiye utni hi width leta hai.
+
+Example:
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+Concept:
+
+Home    About    Contact
+
+Same line.
+
+Common Inline Elements
+<a>
+<span>
+<strong>
+<em>
+<b>
+<i>
+<label>
+<img>
+🔥 Block vs Inline — Direct Difference
+Block	Inline
+Normally new line se start	Normally same line me continue
+Available width occupy kar sakta hai	Content jitni width
+<p>	<a>
+<div>	<span>
+<section>	<strong>
+<article>	<em>
+<h1>	<img>
+🧠 Ek simple example
+<p>Hello</p>
+<p>World</p>
+
+<a href="#">Google</a>
+<a href="#">GitHub</a>
+
+Output concept:
+
+Hello
+World
+
+Google GitHub
+
+Kyun?
+
+<p>       → Block
+<p>       → Block
+
+<a>       → Inline
+<a>       → Inline
+🔥 <div> aur <span> bhi yaad rakho
+
+Ye dono bahut important hain.
+
+<div>
+
+Normally block-level generic container.
+
+<div>
+    <h2>Student</h2>
+    <p>Amrutanshu</p>
+</div>
+<span>
+
+Normally inline generic container.
+
+<p>
+    My name is <span>Amrutanshu</span>.
+</p>
+
+CSS me baad me in dono ka bahut use karenge.
+
+🎯 Sabko ek saath connect karo
+HTML ELEMENT
+│
+├── Tag
+│
+├── Content
+│
+└── Attributes
+      ├── name="value"
+      ├── id="value"
+      ├── class="value"
+      └── etc.
+
+Aur elements ka normal layout behavior:
+
+HTML Elements
+│
+├── Block-level
+│   ├── div
+│   ├── p
+│   ├── h1
+│   ├── section
+│   └── article
+│
+└── Inline
+    ├── a
+    ├── span
+    ├── strong
+    ├── em
+    └── img
+🧠 Bas 3 definitions yaad karo:
+
+Element:
+
+Complete HTML structure.
+
+Attribute:
+
+Extra information/configuration for an element.
+
+Block:
+
+Normally starts on a new line.
+
+Inline:
+
+Normally stays in the same line. -->

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 🎵 <audio> Tag
+Definition — English 🇬🇧
+
+The <audio> element is used to embed sound or audio content in an HTML webpage.
+
+Simple Hinglish:
+
+<audio> ka use webpage ke andar audio/music/sound play karne ke liye hota hai.
+
+1️⃣ Basic Audio
+<audio src="song.mp3"></audio>
+
+Lekin problem ye hai ki normally user ko play/pause controls nahi milenge.
+
+Isliye usually controls use karte hain.
+
+<audio src="song.mp3" controls></audio>
+
+Ab browser audio player show karega:
+
+┌────────────────────────────────┐
+│ ▶  ━━━━━━━ 🔊                 │
+└────────────────────────────────┘
+2️⃣ controls
+Definition — English 🇬🇧
+
+The controls attribute displays built-in audio controls such as play, pause, volume, and progress.
+
+<audio src="song.mp3" controls></audio>
+
+controls ek boolean attribute hai.
+
+Matlab:
+
+controls
+
+bas likhne se enable ho jata hai.
+
+3️⃣ autoplay
+Definition — English 🇬🇧
+
+The autoplay attribute tells the browser to start playing the audio automatically when possible.
+
+<audio src="song.mp3" controls autoplay></audio>
+
+Page load hone ke baad audio automatically start karne ki request karega.
+
+⚠️ Modern browsers often autoplay with sound ko block kar sakte hain.
+
+4️⃣ loop
+Definition — English 🇬🇧
+
+The loop attribute causes the audio to restart automatically after it finishes.
+
+<audio src="song.mp3" controls loop></audio>
+
+Audio:
+
+Play → End → Start → End → Start...
+5️⃣ muted
+Definition — English 🇬🇧
+
+The muted attribute specifies that the audio should initially be muted.
+
+<audio src="song.mp3" controls muted></audio>
+
+Audio player dikhega, but initially sound muted hoga.
+
+🔥 Sabko ek saath
+<audio
+    src="song.mp3"
+    controls
+    loop>
+</audio>
+
+Ye practical example hai.
+
+🎯 Better Method: <source>
+
+Professional HTML me multiple audio formats provide karne ke liye <source> use kar sakte ho:
+
+<audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+    <source src="song.ogg" type="audio/ogg">
+
+    Your browser does not support audio.
+</audio>
+
+Structure:
+
+AUDIO
+│
+├── SOURCE
+├── SOURCE
+└── Fallback Text
+
+Browser compatible format choose kar sakta hai.
+
+🧠 Important Attributes
+Attribute	Purpose
+src	Audio file ka path
+controls	Player controls show karta hai
+autoplay	Automatically play karne ki request
+loop	Audio repeat karta hai
+muted	Initially sound mute
+Interview Definition
+
+The <audio> element is used to embed audio content in an HTML document.
+
+🔥 <audio> complete. -->
+
+
+    <audio src=""></audio>
+
+    <!-- Multile audio sourcce ke liye source tage use kar te hey  -->
+
+    <audio controls muted loop autoplay >
+        <source src="https://file-examples.com/wp-content/storage/2017/11/file_example_MP3_700KB.mp3" type="" title="audio">
+
+        </audio>
+<br>
+        <audio src="./assests/file_example_MP3_700KB.mp3" controls autoplay muted></audio>
+        
+</body>
+</html>

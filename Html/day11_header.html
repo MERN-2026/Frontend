@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- header -->
+     <!-- <header> ka use kisi webpage ya kisi section ke top/introduction part ko define karne ke liye hota hai. -->
+
+        <header>
+            <h1>My Website</h1>
+            <p>Welcome to my website</p>
+        </header>
+    <!-- Header ke andar kya aa sakta hai?
+
+Header ke andar commonly:
+
+Logo
+Website name
+Heading
+Short introduction
+Navigation (<nav>)
+Search box
+etc. -->
+<!-- Example -->
+<header>
+    <h1>AIT</h1>
+    <p>PITA</p>
+    <nav>
+        <a href="#home"Home</a>
+        <a href="#course">Course</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- mportant:
+
+<header> sirf poori website ke liye nahi hota.
+
+Ye kisi individual <section> ya <article> ka header bhi ho sakta hai. -->
+
+
+    <!-- example -->
+     <section>
+        <header>
+            <h2>This is a header inside the section</h2>
+        </header>
+     </section>
+
+<!-- <header> vs <nav> -->
+    <!-- Ye confusion important hai.
+
+<header>
+
+Container / introductory area -->
+<header>
+    <h1>My Website</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<!-- <nav>
+
+Sirf navigation links ka area -->
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+<!-- So:
+
+Header = top/introduction area
+Nav = navigation links
+
+Aur nav ko header ke andar rakhna common hai, lekin compulsory nahi. -->
+
+<article>
+    <header>
+        <h2>How to Learn HTML</h2>
+        <p>Published on 5 August 2026</p>
+    </header>
+
+    <p>HTML is the foundation of web development...</p>
+</article>
+
+<!-- nterview me yaad rakho
+
+<header> represents introductory content or a group of introductory/navigation elements for a webpage, section, or article. -->
+
+
+
+
+
+
+    <!-- <nav> Tag -->
+        <!-- <nav> ka use webpage ke important navigation links ko group karne ke liye hota hai.
+
+Simple:
+
+<nav> = Navigation area -->
+
+    <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Interview Definition
+
+The <nav> element represents a section of a webpage containing major navigation links. -->
+
+    <header>
+        <h1 id="home">Student Learning Hub</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#js">Js</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <h1 id="html">HTML</h1>
+    <h1 id="css">CSS</h1>
+    <h1 id="js">JS</h1>
+    <h1 id="projects">Projects</h1>
+    <h1 id="contact">Contatct</h1>
+
+
+
+
+
+    <!-- Main tag -->
+     <!-- <main> ka use webpage ke main/most important content ko define karne ke liye hota hai.
+
+Simple language:
+
+<main> = Website ka actual main content -->
+
+    <header>
+        <h1></h1>
+
+        <nav>
+            <a href=""></a>
+        </nav>
+
+        <main>
+            <h2></h2>  <!--Main content in side the main tag--> 
+            <p></p>
+        </main>
+
+    </header>
+
+    <!-- Usually <main> ke andar:
+
+<section>
+<article>
+headings
+paragraphs
+images
+tables
+forms
+lists
+etc. -->
+
+<!-- ⚠️ Important Rule
+
+Ek webpage me normally sirf ONE <main> hona chahiye.
+
+❌ Aise nahi:
+
+<main>
+    ...
+</main>
+
+<main>
+    ...
+</main>
+
+✅ Aise:
+
+<main>
+
+    <section>
+        ...
+    </section>
+
+    <section>
+        ...
+    </section>
+
+</main> -->
+
+<!-- 📚 <section> Tag -->
+
+    <!-- The <section> element represents a standalone section of related content within a webpage. -->
+
+    <!-- Simple meaning:
+
+Ek webpage ke andar related content ko ek separate section me organize karne ke liye <section> use karte hain. -->
+
+    <!-- <main> + <section>
+
+Ye combination bahut important hai. -->
+
+<!-- <section> me heading zaroori hai? -->
+   
+    
+
+
+    <!-- <section> vs <main>
+ -->
+
+
+
+    <!-- <main> -->
+
+        <!-- Puri webpage ka primary content. -->
+
+    <!-- <section> -->
+        <!--Main content ke andar related content ka particular part.  -->
+
+
+
+        <!--🔥 <section> vs <div>
+
+Ye interview me important hai.
+
+<section>
+
+Jab content ka meaningful/related group ho.
+
+<section>
+    <h2>Our Courses</h2>
+    ...
+</section>
+<div>
+
+Jab sirf grouping/container chahiye aur us content ka koi specific semantic meaning nahi hai.
+
+<div>
+    <p>Hello</p>
+    <p>Welcome</p>
+</div>
+
+Simple rule:
+
+Meaningful section → <section>
+
+Generic container → <div>  -->
+
+<!-- 🧠 Interview Answer
+
+What is the <section> tag?
+
+The <section> element represents a standalone section of related content within a webpage, usually with a heading. -->
+
+
+
+
+
+<!--<article>  -->
+    <!-- The <article> element represents a self-contained piece of content that can be independently distributed or reused. -->
+
+        <!-- 🔥 Real-Life Examples
+
+<article> commonly use hota hai:
+
+Blog post
+News article
+Student review
+Forum post
+Product review
+Social media post
+Tutorial -->
+
+<!-- 🧠 Sabse important: <section> vs <article>
+
+Ye difference properly samajh lo.
+
+<section>
+
+Related content ka group.
+
+<section>
+    <h2>Student Reviews</h2>
+
+    <p>Our students share their experiences.</p>
+
+</section>
+<article>
+
+Ek independent piece of content.
+
+<article>
+    <h3>Rahul's Review</h3>
+
+    <p>
+        The MERN course was very helpful.
+    </p>
+</article>
+
+Dono ko combine bhi kar sakte ho:
+
+<section>
+
+    <h2>Student Reviews</h2>
+
+    <article>
+        <h3>Rahul</h3>
+        <p>Great course.</p>
+    </article>
+
+    <article>
+        <h3>Ankit</h3>
+        <p>Good trainers.</p>
+    </article>
+
+</section>
+
+Structure:
+
+SECTION
+│
+├── ARTICLE → Rahul's Review
+│
+└── ARTICLE → Ankit's Review
+
+🔥 Section = reviews ka group
+
+🔥 Article = ek individual review -->
+
+<section>
+
+    <h2>Latest Articles</h2>
+
+    <article>
+        <h3>Learn HTML</h3>
+        <p>HTML is the foundation of web development.</p>
+    </article>
+
+    <article>
+        <h3>Learn CSS</h3>
+        <p>CSS is used to style web pages.</p>
+    </article>
+
+    <article>
+        <h3>Learn JavaScript</h3>
+        <p>JavaScript adds functionality to websites.</p>
+    </article>
+
+</section>
+
+<section>
+
+    <h2>Student Reviews</h2>
+
+    <article>
+        <h3>Student 1</h3>
+        <p>Great training and good projects.</p>
+    </article>
+
+    <article>
+        <h3>Student 2</h3>
+        <p>The trainers explained concepts clearly.</p>
+    </article>
+
+</section>
+
+
+<!-- 🔥 Article ke andar <header> bhi aa sakta hai
+<article>
+
+    <header>
+        <h2>How to Learn HTML</h2>
+        <p>Published on August 8, 2026</p>
+    </header>
+
+    <p>
+        HTML is the foundation of web development.
+    </p>
+
+</article>
+
+
+ARTICLE
+│
+├── HEADER
+│   ├── Heading
+│   └── Date
+│
+└── Main Article Content
+
+
+
+🧠 Interview Answer
+
+What is the <article> tag?
+
+The <article> element represents a self-contained piece of content that can be independently distributed or reused.
+-->
+
+
+<!-- 📚 <aside> Tag -->
+
+
+    <!-- The <aside> element represents content that is indirectly related to the main content of a webpage. -->
+
+
+
+        <!-- Simple Hinglish:
+
+<aside> ka use main content ke side/supporting information ke liye hota hai.
+
+🔥 Real-Life Example
+
+Website ka main content:
+
+------------------------------------
+|           MAIN CONTENT           |
+|                                  |
+|  HTML Tutorial                   |
+|  HTML is used to structure...    |
+|                                  |
+------------------------------------
+
+Side me:
+
+------------------------------------
+|           SIDEBAR                |
+|                                  |
+|  Related Courses                 |
+|  Latest Posts                    |
+|  Useful Links                    |
+|  Advertisement                  |
+|                                  |
+------------------------------------
+
+Ye side wala content <aside> ho sakta hai. -->
+    <main>
+
+    <section>
+        <h1>Learn HTML</h1>
+
+        <p>
+            HTML is used to structure web pages.
+        </p>
+    </section>
+
+    <aside>
+        <h2>Related Courses</h2>
+
+        <ul>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+    </aside>
+
+</main>
+<!-- 🔥 <aside> me kya rakh sakte hain?
+
+Common examples:
+
+Related articles
+Related courses
+Latest posts
+Author information
+Advertisements
+Useful links
+Sidebar information
+Tips
+Additional information
+
+
+MAIN
+│
+├── ARTICLE
+│    └── Main Article
+│
+└── ASIDE
+     └── Related Articles
+
+⚠️ Important
+
+<aside> ka matlab hamesha right side nahi hota.
+
+CSS se hum ise:
+
+left side
+right side
+top
+bottom
+
+kahin bhi position kar sakte hain.
+
+HTML me <aside> ka meaning position nahi, content ka relationship hai.
+
+
+🧠 Interview Definition
+
+The <aside> element represents content that is indirectly related to the main content of a webpage.
+
+
+
+-->
+
+
+
+<!-- Footer tag -->
+
+
+
+<!-- The <footer> element represents the footer or bottom section of a webpage, section, or article. -->
+
+    <!-- <footer> ka use webpage ya kisi section/article ke ending information ke liye hota hai. -->
+
+        <!-- Footer me kya hota hai?
+
+Commonly:
+
+Copyright
+Contact information
+Email
+Phone
+Address
+Social media links
+Important links
+Privacy Policy
+Terms & Conditions -->
+
+
+<footer>
+
+    <h2>Contact Us</h2>
+
+    <a href="mailto:abc@gmail.com">Email</a>
+    <br>
+
+    <a href="tel:+911234567890">Phone</a>
+    <br>
+
+    <a href="#">Privacy Policy</a>
+    <br>
+
+    <a href="#">Terms & Conditions</a>
+
+    <p>Copyright © 2026 My Website</p>
+
+</footer>
+
+<!-- 🔥 Footer sirf website ke liye nahi hai
+
+Jaise <header> kisi section/article ka bhi ho sakta hai, waise <footer> bhi ho sakta hai.
+
+Article footer:
+<article>
+
+    <h2>Learn HTML</h2>
+
+    <p>
+        HTML is used to structure webpages.
+    </p>
+
+    <footer>
+        <p>Written by Amrutanshu</p>
+        <p>Published: August 2026</p>
+    </footer>
+
+</article>
+
+Yahan footer poori website ka footer nahi hai.
+
+Ye article ki ending information hai. -->
+
+
+
+
+
+<!-- BODY
+│
+├── HEADER
+│   │
+│   ├── Logo
+│   ├── Heading
+│   ├── Paragraph / Intro
+│   │
+│   └── NAV
+│       │
+│       └── Navigation Links
+│
+├── MAIN
+│   │
+│   ├── SECTION
+│   │   │
+│   │   ├── Header
+│   │   ├── Article
+│   │   ├── Article
+│   │   └── Aside
+│   │
+│   ├── SECTION
+│   │   │
+│   │   ├── Header
+│   │   └── Content
+│   │
+│   ├── ARTICLE
+│   │   │
+│   │   ├── Header
+│   │   ├── Content
+│   │   └── Footer
+│   │
+│   └── ASIDE
+│       │
+│       ├── Section
+│       └── Article
+│
+└── FOOTER
+    │
+    ├── Navigation
+    ├── Links
+    └── Contact / Copyright -->
+
+
+
+
+<!-- 🧠 MASTER STRUCTURE
+ 
+BODY
+│
+├── HEADER
+│   ├── Logo
+│   ├── Heading
+│   ├── Intro
+│   └── NAV
+│       └── Links
+│
+├── MAIN
+│   │
+│   ├── SECTION
+│   │   ├── HEADER
+│   │   ├── ARTICLE
+│   │   │   ├── HEADER
+│   │   │   ├── Content
+│   │   │   └── FOOTER
+│   │   ├── ARTICLE
+│   │   └── ASIDE
+│   │
+│   ├── SECTION
+│   │   └── Content
+│   │
+│   ├── ARTICLE
+│   │   ├── HEADER
+│   │   ├── Content
+│   │   └── FOOTER
+│   │
+│   └── ASIDE
+│       ├── SECTION
+│       └── ARTICLE
+│
+└── FOOTER
+    ├── NAV
+    │   └── Links
+    ├── Contact
+    └── Copyright
+
+
+
+
+
+
+
+-->
+
+
+    
+
+
+
+<!-- 🏗️ Complete Semantic HTML Structure -->
+ <!-- 
+
+HTML
+│
+├── HEAD
+│
+└── BODY
+    │
+    ├── HEADER
+    │   │
+    │   ├── Logo / Website Name
+    │   │
+    │   └── NAV
+    │       └── Navigation Links
+    │
+    ├── MAIN
+    │   │
+    │   ├── SECTION
+    │   │   ├── SECTION HEADER
+    │   │   ├── ARTICLE
+    │   │   ├── ARTICLE
+    │   │   └── ARTICLE
+    │   │
+    │   ├── SECTION
+    │   │   ├── SECTION HEADER
+    │   │   └── Content
+    │   │
+    │   ├── ARTICLE
+    │   │   ├── ARTICLE HEADER
+    │   │   └── Article Content
+    │   │
+    │   └── ASIDE
+    │       └── Related / Supporting Content
+    │
+    └── FOOTER
+        └── Footer Information
+
+
+ -->
+
+ <!-- 
+ nesting 
+
+ BODY
+│
+├── HEADER
+│   └── NAV
+│
+├── MAIN
+│   ├── SECTION
+│   │   └── ARTICLE
+│   │
+│   ├── SECTION
+│   │
+│   ├── ARTICLE
+│   │
+│   └── ASIDE
+│
+└── FOOTER
+ 
+ -->
+</body>
+</html>

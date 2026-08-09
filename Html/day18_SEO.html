@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Html Learning Project">
+    <title>Document</title>
+</head>
+<body>
+    <!-- next topic: Meta Tags
+
+📚 Meta Tags
+Definition — English 🇬🇧
+
+Meta tags provide information about an HTML document to browsers, search engines, and other web services.
+
+Simple Hinglish:
+
+Meta tags webpage ke baare me additional information dete hain. Ye normally webpage ke <head> ke andar hote hain aur page par directly visible nahi hote.
+
+1️⃣ <meta charset="UTF-8">
+
+Ye tum already use kar rahe ho:
+
+<meta charset="UTF-8">
+charset kya hai?
+
+Character encoding define karta hai.
+
+UTF-8 ki wajah se different languages aur special characters properly display ho sakte hain.
+
+Example:
+
+Hello
+नमस्ते
+こんにちは
+©
+₹
+
+Isliye ye almost har HTML page me rakhte hain.
+
+2️⃣ Viewport Meta Tag 📱
+
+Ye bahut important hai:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Iska purpose:
+
+Browser ko batata hai ki webpage ko device ki screen ke according kaise display karna hai.
+
+Especially mobile responsive design ke liye important hai.
+
+Desktop 💻 → Website
+Mobile  📱 → Website
+Tablet  → Website
+
+CSS responsive design ke saath ye bahut important hoga.
+
+Breakdown:
+name="viewport"
+      ↓
+Viewport settings
+
+content="width=device-width"
+      ↓
+Device ki actual screen width use karo
+
+initial-scale=1.0
+      ↓
+Initial zoom = 100%
+3️⃣ Description Meta Tag
+<meta
+    name="description"
+    content="Learn HTML, CSS and JavaScript with practical projects.">
+
+Ye webpage ka short description provide karta hai.
+
+Search engines is information ko search-result snippets ke liye use kar sakte hain.
+
+Concept:
+
+Google Search
+────────────────────────
+My Learning Website
+Learn HTML, CSS and JavaScript...
+────────────────────────
+
+⚠️ Ye guarantee nahi karta ki Google exactly wahi description show karega.
+
+4️⃣ robots
+
+Example:
+
+<meta name="robots" content="index, follow">
+
+Ye search-engine crawlers ko instructions provide kar sakta hai.
+
+Basic meaning:
+
+index  → page ko index karne ki permission
+follow → page ke links follow karne ki permission
+
+Lekin beginner level par isko abhi advanced topic samajh sakte ho.
+
+🧠 Tumhare HTML <head> ka structure
+
+Ab tumhara standard structure roughly:
+
+HTML
+│
+├── HEAD
+│   │
+│   ├── TITLE
+│   │
+│   ├── META CHARSET
+│   │
+│   ├── META VIEWPORT
+│   │
+│   ├── META DESCRIPTION
+│   │
+│   └── Other head elements
+│
+└── BODY
+🔥 Tumhare projects ke liye minimum
+
+Har normal HTML page me ye rakhna:
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+</head>
+
+Aur agar page ka meaningful description hai:
+
+<meta
+    name="description"
+    content="My HTML learning project">
+🧠 Bas abhi ye 3 yaad rakho:
+
+charset → characters correctly display
+
+viewport → mobile/device screen handling
+
+description → page ka short description -->
+</body>
+</html>
