@@ -1,0 +1,330 @@
+/* CSS Lesson 4 — Colors & Backgrounds.
+
+🎨 1. CSS Colors
+
+CSS allows you to change the color of text, backgrounds, borders, etc.
+
+The simplest example:
+
+h1 {
+    color: red;
+}
+
+There are several ways to specify colors.
+
+1. Named Colors
+
+You can use the name of a color:
+
+h1 {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+button {
+    color: white;
+}
+
+Some common colors:
+
+red
+blue
+green
+yellow
+orange
+purple
+black
+white
+gray
+pink
+brown
+
+There are many named colors available, but in real projects you'll often use other color formats.
+
+2. RGB
+
+RGB means:
+
+R → Red
+G → Green
+B → Blue
+
+Syntax:
+
+color: rgb(255, 0, 0);
+
+This gives red.
+
+Example:
+
+h1 {
+    color: rgb(255, 0, 0);
+}
+
+Each value ranges from:
+
+0 → 255
+
+Examples:
+
+rgb(255, 0, 0)     Red
+rgb(0, 255, 0)     Green
+rgb(0, 0, 255)     Blue
+rgb(0, 0, 0)       Black
+rgb(255, 255, 255) White
+3. RGBA
+
+RGBA adds alpha, which controls transparency.
+
+Syntax:
+
+color: rgba(255, 0, 0, 0.5);
+
+The fourth value is alpha.
+
+0   → completely transparent
+1   → completely visible
+0.5 → 50% transparent
+
+Example:
+
+background-color: rgba(0, 0, 0, 0.5);
+4. HEX Colors ⭐
+
+You'll use HEX colors very often in web development.
+
+Example:
+
+color: #ff0000;
+
+This is red.
+
+Some common examples:
+
+#ff0000  Red
+#00ff00  Green
+#0000ff  Blue
+#000000  Black
+#ffffff  White
+
+HEX uses:
+
+#RRGGBB
+
+For example:
+
+#ff0000
+ ││││││
+ ││ └── Blue
+ │└──── Green
+ └───── Red
+
+You don't need to memorize the values. You can use a color picker when designing websites.
+
+🌈 5. Background Color
+
+We use:
+
+background-color
+
+Example:
+
+body {
+    background-color: lightblue;
+}
+
+Now the entire page has a light-blue background.
+
+Another example:
+
+button {
+    background-color: black;
+    color: white;
+}
+6. Background Image
+
+CSS can also place an image as a background.
+
+body {
+    background-image: url("image.jpg");
+}
+
+The image path can be relative to your CSS file.
+
+For example:
+
+project
+│
+├── index.html
+├── css
+│   └── style.css
+└── images
+    └── hero.jpg
+
+From style.css:
+
+body {
+    background-image: url("../images/hero.jpg");
+}
+
+Remember: the path is calculated from the CSS file's location.
+
+7. Background Repeat
+
+By default, a small background image may repeat.
+
+You can control this with:
+
+background-repeat
+
+Example:
+
+body {
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+}
+
+Other values:
+
+background-repeat: repeat;
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+background-repeat: no-repeat;
+8. Background Size ⭐
+
+Very important:
+
+background-size: cover;
+
+cover makes the background image cover the entire element.
+
+Example:
+
+body {
+    background-image: url("image.jpg");
+    background-size: cover;
+}
+
+Another value:
+
+background-size: contain;
+Difference
+
+cover
+
+Image covers the entire area, but some part of the image may be cropped.
+
+contain
+
+Entire image remains visible, but empty space may appear.
+
+9. Background Position
+
+You can control where the background image appears.
+
+background-position: center;
+
+Common values:
+
+center
+top
+bottom
+left
+right
+
+Example:
+
+body {
+    background-image: url("image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+This is very common for hero sections.
+
+10. Background Shorthand ⭐
+
+Instead of writing:
+
+body {
+    background-color: black;
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+You can eventually use the shorthand:
+
+body {
+    background: black url("image.jpg") no-repeat center / cover;
+}
+
+For now, don't worry about memorizing the shorthand syntax. Learn the individual properties first.
+
+🧠 Important Properties
+
+Today you should remember these:
+
+color
+background-color
+background-image
+background-repeat
+background-size
+background-position
+
+And color formats:
+
+Named colors
+RGB
+RGBA
+HEX
+🔥 Practice Challenge
+
+Create:
+
+<div class="card">
+    <h1>My Portfolio</h1>
+    <p>Welcome to my website.</p>
+</div>
+
+Now style it:
+
+.card
+Background color → dark
+Text color → white
+h1
+Use a HEX color
+Make it a different color from the paragraph
+p
+Use RGB for the text color
+Bonus
+
+Give .card a background image and try:
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+Don't worry if the background image part feels confusing right now. We'll use it much more when we start building actual websites. */
+
+
+
+.card{
+    background-color: black;
+    color: white;
+    background-image: url(https://www.bing.com/th/id/OIP.yHgHKAIQyjFRMycdMVRtSQHaE8?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+h1{
+    color: #ff0000;
+}
+p{
+    color: rgb(0, 0,255);
+}

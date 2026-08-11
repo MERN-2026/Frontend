@@ -1,0 +1,339 @@
+/* CSS Lesson 10 — Position Property
+
+The position property controls how an element is positioned in the page.
+
+The main values are:
+
+static
+relative
+absolute
+fixed
+sticky
+1. position: static
+
+This is the default position of HTML elements.
+
+.box {
+    position: static;
+}
+
+If you don't write any position, the element is normally static.
+
+For example:
+
+<div class="box">Hello</div>
+.box {
+    position: static;
+    top: 50px;
+}
+
+The top: 50px won't move a static element in the normal positioning sense.
+
+So remember:
+
+static = normal document flow.
+
+2. position: relative ⭐
+
+relative keeps the element's normal position in the document flow, but allows you to offset it using:
+
+top
+right
+bottom
+left
+
+Example:
+
+.box {
+    position: relative;
+    left: 50px;
+}
+
+The box moves 50px to the right from where it would normally be.
+
+Another:
+
+.box {
+    position: relative;
+    top: 30px;
+}
+
+The box moves 30px downward.
+
+Important
+
+The element's original space is still preserved.
+
+Think:
+
+Original position
+      ↓
+┌─────────┐
+│         │
+└─────────┘
+
+        ↓ move right
+
+          ┌─────────┐
+          │         │
+          └─────────┘
+
+The browser still considers the element's original location in the normal layout.
+
+3. position: absolute ⭐⭐⭐
+
+This is very important.
+
+An absolutely positioned element is removed from the normal document flow and positioned relative to its nearest positioned ancestor.
+
+Example:
+
+<div class="parent">
+    <div class="child">Hello</div>
+</div>
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+The important combination is:
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+}
+
+The child can now be positioned relative to the parent.
+
+Why do we use relative on the parent?
+
+This is one of the most important concepts.
+
+Suppose:
+
+<div class="card">
+    <span class="badge">NEW</span>
+</div>
+
+CSS:
+
+.card {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+Now the badge can sit at the top-right corner of the card.
+
+This technique is used everywhere in real websites.
+
+For example:
+
+┌──────────────────────────────┐
+│                       NEW    │
+│                              │
+│         CARD CONTENT         │
+│                              │
+└──────────────────────────────┘
+4. top, right, bottom, left
+
+These properties control the position of positioned elements.
+
+Example:
+
+.box {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+Means:
+
+20px from the top
+30px from the left
+
+You can also use:
+
+right: 20px;
+bottom: 30px;
+5. position: fixed ⭐⭐⭐
+
+A fixed element is positioned relative to the viewport.
+
+It stays in the same place even when you scroll.
+
+Example:
+
+button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+The button stays at the bottom-right of the browser window.
+
+Example use cases:
+
+Floating action button
+Chat button
+Fixed navigation
+Back-to-top button
+
+For example:
+
+┌──────────────────────────────┐
+│                              │
+│        Website content       │
+│                              │
+│                              │
+│                         ┌──┐ │
+│                         │↑ │ │
+│                         └──┘ │
+└──────────────────────────────┘
+
+The button stays there while you scroll.
+
+6. position: sticky ⭐⭐⭐
+
+sticky is a combination of normal positioning and fixed-like behavior.
+
+Example:
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+The element behaves normally at first.
+
+When you scroll and it reaches the specified position, it sticks there.
+
+Common use:
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+This creates a sticky navigation bar.
+
+🧠 Position Comparison
+Position	Normal flow?	Can use top/left?	Stays during scroll?
+static	Yes	No meaningful offset	Normal
+relative	Yes	Yes	No
+absolute	No	Yes	No
+fixed	No	Yes	Yes
+sticky	Yes until it sticks	Yes	Yes, after threshold
+⭐ Very Important Concept
+
+Remember this pattern:
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+}
+
+This is one of the most commonly used combinations in CSS.
+
+For example, creating a notification badge:
+
+<div class="profile">
+    <img src="profile.jpg" alt="Profile">
+    <span class="notification">3</span>
+</div>
+.profile {
+    position: relative;
+}
+
+.notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+🔥 Practice Challenge
+
+Create:
+
+<div class="card">
+
+    <span class="badge">NEW</span>
+
+    <h2>Web Development</h2>
+
+    <p>Learn HTML, CSS and JavaScript.</p>
+
+</div>
+
+CSS:
+
+.card
+
+Make:
+
+width: 400px
+height: 250px
+border: 2px solid black
+position: relative
+.badge
+
+Make:
+
+position: absolute
+top: 10px
+right: 10px
+
+Give it a background color and some padding.
+
+Then experiment:
+
+top: 20px;
+right: 20px;
+
+and see what happens.
+
+🎯 Your Progress
+CSS Basics ✅
+Applying CSS ✅
+Selectors ✅
+Colors & Backgrounds ✅
+Units ✅
+Text & Fonts ✅
+Box Model ✅
+Width & Height ✅
+Display ✅
+Position ← NOW ✅
+🚀 Next topic: Flexbox
+
+Finally, we'll start:
+
+display: flex;
+
+Then we'll cover:
+
+flex-direction → justify-content → align-items → align-self → flex-wrap → gap → flex-grow/shrink/basis → order
+
+So yes bhai, align-items is coming next chapter. 🔥 */
+
+/* The main values are:
+
+static
+relative
+absolute
+fixed
+sticky */
+

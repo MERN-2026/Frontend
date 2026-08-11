@@ -1,0 +1,265 @@
+/* CSS Lesson 8 — Width & Height
+
+CSS mein width aur height ka use elements ka size control karne ke liye hota hai.
+
+1. width
+
+width controls how wide an element is.
+
+.box {
+    width: 300px;
+}
+
+Example:
+
+<div class="box">
+    Hello World
+</div>
+.box {
+    width: 300px;
+    background-color: lightblue;
+}
+
+The content area will have a width of 300px under the default content-box model.
+
+2. height
+
+height controls how tall an element is.
+
+.box {
+    height: 200px;
+}
+
+You can use both together:
+
+.box {
+    width: 300px;
+    height: 200px;
+}
+3. Width and Height using %
+
+You can use percentages too.
+
+.container {
+    width: 800px;
+}
+
+.box {
+    width: 50%;
+}
+
+The .box will be 50% of its containing block's width.
+
+So approximately:
+
+Container = 800px
+Box       = 50%
+Box       = 400px
+4. width: 100% ⭐
+
+This is extremely common.
+
+input {
+    width: 100%;
+}
+
+It tells the element to take the available width of its containing block.
+
+You'll use this frequently with:
+
+Forms
+Inputs
+Cards
+Containers
+Images
+5. max-width ⭐⭐⭐
+
+max-width sets the maximum allowed width.
+
+Example:
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+This is very common in real websites.
+
+Imagine a large desktop screen.
+
+Without max-width:
+
+|----------------------------------------------|
+|                                              |
+|              VERY WIDE CONTENT               |
+|                                              |
+|----------------------------------------------|
+
+With:
+
+max-width: 1200px;
+
+the content won't keep getting wider beyond the maximum.
+
+6. min-width
+
+min-width sets the minimum allowed width.
+
+.box {
+    min-width: 300px;
+}
+
+The box won't become narrower than 300px under normal sizing constraints.
+
+7. max-height
+
+Same concept, but for height.
+
+.box {
+    max-height: 400px;
+}
+
+The element's height won't exceed that limit when its content can fit within the constraint.
+
+8. min-height
+
+Sets the minimum height.
+
+.box {
+    min-height: 300px;
+}
+
+Even if the content is very small, the box will maintain at least that minimum height.
+
+9. height: 100vh ⭐
+
+You already saw vh.
+
+.hero {
+    height: 100vh;
+}
+
+This makes the hero section approximately as tall as the viewport.
+
+For example:
+
+.hero {
+    width: 100%;
+    height: 100vh;
+}
+
+This is common for full-screen landing page sections.
+
+10. Images and max-width
+
+A very common CSS pattern:
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+This helps prevent an image from becoming wider than its containing area.
+
+And:
+
+height: auto;
+
+allows the browser to preserve the image's aspect ratio.
+
+You'll use this a lot when making responsive websites.
+
+11. Important Difference
+
+Don't confuse:
+
+width
+max-width
+min-width
+width
+
+The preferred/declared width.
+
+max-width
+
+The maximum allowed width.
+
+min-width
+
+The minimum allowed width.
+
+Same concept for height:
+
+height
+max-height
+min-height
+🧠 Example
+
+Consider:
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+}
+
+Think:
+
+          maximum
+             ↓
+100% ← available size → 1200px
+             ↑
+          minimum
+           300px
+
+The exact rendered width also depends on the containing block and other CSS constraints.
+
+🔥 Practice Challenge
+
+Create:
+
+<div class="container">
+
+    <h1>My Portfolio</h1>
+
+    <div class="card">
+        <h2>Web Development</h2>
+        <p>I am learning HTML and CSS.</p>
+    </div>
+
+</div>
+
+Now write CSS.
+
+.container
+width: 90%;
+max-width: 1200px;
+min-height: 500px;
+.card
+width: 50%;
+height: 250px;
+min-width: 300px;
+max-width: 600px;
+
+Then resize your browser and observe what happens.
+
+🎯 Progress
+
+We've now covered:
+
+CSS Basics ✅
+Applying CSS ✅
+Selectors ✅
+Colors & Backgrounds ✅
+Units ✅
+Text & Fonts ✅
+Box Model ✅
+Width & Height ← NOW 🔥
+Next topic:
+Display Property
+
+We'll learn:
+
+block → inline → inline-block → none
+
+And this topic will prepare you for Position + Flexbox. */

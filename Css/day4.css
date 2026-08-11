@@ -1,0 +1,217 @@
+/*     font-size: 2em;
+}
+
+The child font size becomes:
+
+2 × 20px = 40px
+
+So:
+
+1em = 20px
+2em = 40px
+
+em can become confusing when elements are nested because the size can compound.
+
+4. rem ⭐
+
+rem means root em.
+
+It is relative to the font size of the root <html> element.
+
+For example:
+
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+Then:
+
+2rem = 2 × 16px
+     = 32px
+
+Another:
+
+p {
+    font-size: 1rem;
+}
+
+That means:
+
+1rem = 16px
+Why is rem popular?
+
+Because it gives you a consistent reference point throughout the page.
+
+You'll see rem a lot in modern CSS.
+
+5. vh — Viewport Height
+
+vh means viewport height.
+
+The viewport is basically the visible browser area.
+
+.box {
+    height: 100vh;
+}
+
+100vh means:
+
+Take 100% of the viewport height.
+
+So if the browser viewport is 800px tall:
+
+100vh ≈ 800px
+
+Example:
+
+.hero {
+    height: 100vh;
+}
+
+This is commonly used for full-screen hero sections.
+
+6. vw — Viewport Width
+
+vw means viewport width.
+
+.box {
+    width: 100vw;
+}
+
+This means:
+
+Take 100% of the viewport width.
+
+For example, if the browser width is 1200px:
+
+100vw ≈ 1200px
+7. vmin and vmax
+
+These are less important for now, but you should know they exist.
+
+vmin
+
+Uses the smaller value between viewport width and height.
+
+font-size: 5vmin;
+vmax
+
+Uses the larger value.
+
+font-size: 5vmax;
+
+Don't worry about these yet.
+
+🧠 Important Comparison
+Unit	Relative to	Example
+px	Fixed CSS pixel size	20px
+%	Parent/context	50%
+em	Current/parent font-size context	2em
+rem	Root <html> font-size	2rem
+vh	Viewport height	100vh
+vw	Viewport width	100vw
+⭐ em vs rem
+
+This is something you should understand early.
+
+Suppose:
+
+html {
+    font-size: 16px;
+}
+
+.parent {
+    font-size: 20px;
+}
+
+.child {
+    font-size: 2em;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+Then:
+
+child:
+2em → 40px
+
+title:
+2rem → 32px
+
+Why?
+
+Because em depends on the relevant font-size context, while rem uses the root <html> font-size.
+
+🔥 Practice Challenge
+
+Create this:
+
+<div class="container">
+
+    <h1>CSS Units</h1>
+
+    <div class="box box-one"></div>
+
+    <div class="box box-two"></div>
+
+</div>
+
+Now try:
+
+.container
+width → 80%
+.box-one
+width → 300px
+height → 200px
+.box-two
+
+Try:
+
+width → 50%
+height → 30vh
+
+Then change:
+
+50% → 70%
+30vh → 50vh
+
+and observe what happens when you resize the browser.
+
+🎯 One thing to remember
+
+Don't try to memorize every CSS unit today.
+
+For now, become comfortable with:
+
+px → fixed size
+
+% → relative to parent/context
+
+rem → relative to root font size
+
+em → relative font-size context
+
+vh → viewport height
+
+vw → viewport width */
+
+
+.container{
+    width: 80%;
+    background-color: black;
+    color: white;
+}
+box-one{
+    width: 300px;
+    height:200px;
+}
+box-two{
+    width :50%;
+    height :30vh;
+}

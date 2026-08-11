@@ -233,3 +233,22 @@ button
 background color → black
 text color → white
 font size → 18px */
+
+h1{
+    color: blue;
+    font-size: 40px;
+}
+h2{
+    color: red;
+    font-size: 30px;
+}
+p{
+    color: green;
+    font-size:20px;
+}
+button{
+    background-color: black;
+    color:white;
+    font-size: 18px;
+    border-radius: 15px;
+}

@@ -1,0 +1,402 @@
+/* CSS Lesson 6 — Text & Fonts
+
+Now we'll learn how to control the appearance of text using CSS.
+
+This topic is important because almost every website contains text.
+
+1. color
+
+You already know this one:
+
+p {
+    color: blue;
+}
+
+It changes the text color.
+
+2. text-align
+
+Controls the horizontal alignment of text.
+
+h1 {
+    text-align: center;
+}
+
+Common values:
+
+text-align: left;
+text-align: center;
+text-align: right;
+text-align: justify;
+
+Example:
+
+<h1>My Portfolio</h1>
+<p>I am learning web development.</p>
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+Remember:
+left    → left side
+center  → center
+right   → right side
+justify → spreads text across the line
+3. text-decoration
+
+Used to add or remove decorations from text.
+
+p {
+    text-decoration: underline;
+}
+
+Common values:
+
+text-decoration: underline;
+text-decoration: overline;
+text-decoration: line-through;
+text-decoration: none;
+Example
+
+Remove underline from a link:
+
+a {
+    text-decoration: none;
+}
+
+This is extremely common.
+
+4. text-transform
+
+Changes the capitalization of text.
+
+h1 {
+    text-transform: uppercase;
+}
+
+Values:
+
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: capitalize;
+
+Example:
+
+HTML:
+
+<p>hello world</p>
+
+CSS:
+
+p {
+    text-transform: uppercase;
+}
+
+Output:
+
+HELLO WORLD
+5. text-indent
+
+Adds indentation to the first line of a paragraph.
+
+p {
+    text-indent: 40px;
+}
+
+The first line starts 40px away from the left.
+
+6. letter-spacing
+
+Controls the space between individual letters.
+
+h1 {
+    letter-spacing: 5px;
+}
+
+Example:
+
+Normal:
+HELLO
+
+With letter-spacing:
+H E L L O
+
+You can also use negative values:
+
+h1 {
+    letter-spacing: -1px;
+}
+7. word-spacing
+
+Controls the space between words.
+
+p {
+    word-spacing: 10px;
+}
+8. line-height ⭐
+
+Controls the vertical space between lines of text.
+
+p {
+    line-height: 1.6;
+}
+
+This is very useful for making paragraphs easier to read.
+
+Example:
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+Don't confuse:
+
+letter-spacing → space between letters
+
+word-spacing → space between words
+
+line-height → space between lines
+9. font-size
+
+Controls the size of text.
+
+h1 {
+    font-size: 40px;
+}
+
+You can use different units:
+
+font-size: 40px;
+font-size: 2rem;
+font-size: 5vw;
+
+For now, px and rem are the most important.
+
+10. font-family ⭐
+
+Controls which font is used.
+
+body {
+    font-family: Arial;
+}
+
+You can provide multiple fonts as fallbacks:
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+The browser tries them from left to right.
+
+Arial
+ ↓
+if unavailable
+ ↓
+Helvetica
+ ↓
+if unavailable
+ ↓
+sans-serif
+11. font-weight
+
+Controls how bold the text is.
+
+h1 {
+    font-weight: bold;
+}
+
+You can also use numbers:
+
+font-weight: 400;
+font-weight: 500;
+font-weight: 600;
+font-weight: 700;
+
+Generally:
+
+400 → normal
+700 → bold
+
+Example:
+
+h1 {
+    font-weight: 700;
+}
+12. font-style
+
+Controls whether text is normal or italic.
+
+p {
+    font-style: italic;
+}
+
+Common values:
+
+font-style: normal;
+font-style: italic;
+13. font-variant
+
+A less commonly used property:
+
+p {
+    font-variant: small-caps;
+}
+
+It can display lowercase letters in a small-cap style.
+
+You don't need to focus on this right now.
+
+14. Font Shorthand
+
+CSS allows several font properties to be combined.
+
+Instead of:
+
+p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+You can eventually write:
+
+p {
+    font: italic bold 20px Arial;
+}
+
+For now, learn the individual properties first.
+
+🧠 Important Properties Today
+
+Focus mainly on these:
+
+color
+text-align
+text-decoration
+text-transform
+letter-spacing
+word-spacing
+line-height
+font-size
+font-family
+font-weight
+font-style
+🔥 Practice Challenge
+
+Create:
+
+<div class="card">
+
+    <h1>My Portfolio</h1>
+
+    <h2>About Me</h2>
+
+    <p>
+        I am learning HTML and CSS.
+        My goal is to become a professional web developer.
+    </p>
+
+    <a href="#">Learn More</a>
+
+</div>
+
+Now style it.
+
+h1
+Center the text
+Font size → 40px
+Make it bold
+Use uppercase
+Add 2px letter spacing
+h2
+Left align
+Font size → 28px
+Italic
+p
+Font size → 18px
+Line height → 1.6
+Word spacing → 5px
+a
+Remove underline
+Make the text bold
+🎯 Your CSS knowledge so far
+
+You've now covered:
+
+1. CSS Basics ✅
+2. Applying CSS ✅
+3. Selectors ✅
+4. Colors & Backgrounds ✅
+5. Units ✅
+6. Text & Fonts ✅
+
+Next → CSS Box Model ⭐⭐⭐
+
+This is a very important topic. */
+.header{
+    color: red;
+       
+    
+}
+header{
+    display: flex;
+}
+h1{
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-size: 40px;
+    font-size: 2rem;
+    font-size: 5vh;
+    font-weight: bold;
+    font-weight: 700;
+    font-style: italic;
+    
+
+}
+nav{
+    text-align: center;
+    text-align: left;
+    text-align: right;
+    text-align: justify;
+    
+}
+
+/* text-align */
+/* text-decoration */
+/* text-transform */
+/* text-indent */
+/* letter-spacing */
+/* word-spacing */
+/* line-height */
+/* font-size */
+/* font-family */
+/*  font-weight*/
+/* font-style */
+/* font-variant */
+/* Font Shorthand */
+
+
+p {
+    text-indent: 40px;
+    word-spacing: 10px;
+    line-height: 1.6;
+    font-variant: small-caps;
+}
+
+a{
+    color: green;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}

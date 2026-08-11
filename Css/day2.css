@@ -1,0 +1,288 @@
+/* selector {
+    property: value;
+}
+  */
+
+  /* CSS Lesson 3 — Selectors 
+  
+  
+  A CSS selector is used to select the HTML element(s) that you want to style.
+
+Basic structure:
+
+selector {
+    property: value;
+}
+
+There are several important selectors we'll learn.
+
+Element Selector:-Direct html element 
+Class Selector:-only a class and before tha we use .
+ID Selector:-only on id and before that we use #
+Universal Selector:-*{
+}
+Grouping Selector:-h1,h2,nav{
+}
+   
+  */
+
+
+  /* 
+  
+  1. Element Selector
+
+This is the simplest selector.
+
+You select an HTML element by writing its tag name.
+
+HTML:
+
+<h1>My Portfolio</h1>
+<p>I am learning CSS.</p>
+
+CSS:
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: green;
+}
+
+Here:
+
+h1 → selects all <h1> elements
+p  → selects all <p> elements
+Example
+
+If you have:
+
+<h1>Hello</h1>
+<h1>Welcome</h1>
+<h1>My Portfolio</h1>
+
+and write:
+
+h1 {
+    color: red;
+}
+
+All three <h1> elements become red.
+
+2. Class Selector ⭐
+
+A class is used when you want to apply the same style to specific elements.
+
+HTML:
+
+<p class="important">This is important.</p>
+
+<p>This is normal.</p>
+
+<p class="important">This is also important.</p>
+
+CSS:
+
+.important {
+    color: red;
+}
+
+Notice the . before important.
+
+.important
+    ↑
+  dot
+
+The dot tells CSS:
+
+"This is a class selector."
+
+Both paragraphs with class="important" become red.
+
+One class can be used many times
+
+This is very important.
+
+<h1 class="blue">Hello</h1>
+
+<p class="blue">Welcome</p>
+
+<button class="blue">Click Me</button>
+
+CSS:
+
+.blue {
+    color: blue;
+}
+
+All three elements will have blue text.
+
+That's one reason classes are extremely useful.
+
+3. ID Selector
+
+An ID is used to identify a specific element.
+
+HTML:
+
+<h1 id="main-title">My Portfolio</h1>
+
+CSS:
+
+#main-title {
+    color: purple;
+}
+
+Notice:
+
+#main-title
+    ↑
+  hash
+
+# means ID selector.
+
+Class vs ID
+
+Remember this:
+
+Class
+<p class="text">Hello</p>
+<p class="text">Welcome</p>
+
+A class can be used on multiple elements.
+
+ID
+<h1 id="main-title">My Portfolio</h1>
+
+An ID should normally identify one unique element on the page.
+
+Think:
+
+class → group
+id    → unique identity
+4. Universal Selector
+
+The universal selector selects everything.
+
+It uses:
+
+* {
+    
+}
+
+Example:
+
+* {
+    margin: 0;
+}
+
+This applies margin: 0 to all elements.
+
+You'll see this selector frequently in CSS.
+
+5. Grouping Selector
+
+Suppose you want the same CSS for multiple elements.
+
+Instead of:
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: blue;
+}
+
+p {
+    color: blue;
+}
+
+You can group them:
+
+h1, h2, p {
+    color: blue;
+}
+
+The comma , means:
+
+"Apply this style to all of these selectors."
+
+🧠 Quick Revision
+Selector	Syntax	Meaning
+Element	h1	Selects all <h1>
+Class	.box	Selects elements with class="box"
+ID	#header	Selects element with id="header"
+Universal	*	Selects everything
+Grouping	h1, p	Selects multiple elements
+🔥 Your Practice Challenge
+
+Create this HTML:
+
+<h1>My Portfolio</h1>
+
+<h2>About Me</h2>
+
+<p class="highlight">I am a web developer.</p>
+
+<p>I am learning HTML and CSS.</p>
+
+<button id="contact">Contact Me</button>
+
+<div class="box">My Projects</div>
+
+<div class="box">My Skills</div>
+
+Now write CSS using all 5 selectors.
+
+Requirements
+
+1. Element selector
+
+Make h1 blue.
+
+2. Class selector
+
+Make both .box elements have a gray background.
+
+3. ID selector
+
+Make #contact have a black background and white text.
+
+4. Universal selector
+
+Remove the default margin from everything.
+
+5. Grouping selector
+
+Make h1 and h2 use font-family: Arial.
+
+⭐ Bonus Challenge
+
+Make only:
+
+<p class="highlight">I am a web developer.</p>
+
+have a yellow background using the class selector.
+  */
+
+
+  h1{
+    color: blue;
+  }
+  .box{
+    background-color: gray;
+  }
+  #contact{
+    background-color: black;
+    color: red
+    ;
+  }
+  *{
+    margin: 0px;
+  }
+
+  h1,h2{
+    font-family: Arial, Helvetica, sans-serif;
+  }

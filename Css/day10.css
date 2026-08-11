@@ -1,0 +1,474 @@
+/* CSS Lesson 11 — Flexbox ⭐⭐⭐
+
+Flexbox is used to arrange elements in rows or columns and control their alignment and spacing.
+
+You will use Flexbox constantly when building real websites.
+
+1. What is Flexbox?
+
+Flexbox = Flexible Box Layout
+
+Suppose you have:
+
+<div class="container">
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+</div>
+
+Normally, <div> elements are block elements, so they appear vertically:
+
+Box 1
+
+Box 2
+
+Box 3
+
+Now we write:
+
+.container {
+    display: flex;
+}
+
+They will normally arrange in a row:
+
+Box 1    Box 2    Box 3
+
+That's the basic idea of Flexbox.
+
+2. Flex Container vs Flex Items
+
+This is very important.
+
+HTML:
+
+<div class="container">
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+</div>
+
+CSS:
+
+.container {
+    display: flex;
+}
+
+Here:
+
+.container
+    ↓
+Flex Container
+
+.box
+.box
+.box
+    ↓
+Flex Items
+
+When you write:
+
+display: flex;
+
+the parent becomes the flex container, and its direct children become flex items.
+
+3. Main Axis and Cross Axis ⭐⭐⭐
+
+This is the most important concept for understanding:
+
+justify-content
+align-items
+
+By default:
+
+.container {
+    display: flex;
+}
+
+Flexbox uses:
+
+MAIN AXIS
+──────────────────────────────→
+
+┌───────┐  ┌───────┐  ┌───────┐
+│ Box 1 │  │ Box 2 │  │ Box 3 │
+└───────┘  └───────┘  └───────┘
+                ↑
+          CROSS AXIS
+
+By default:
+
+Main axis  → horizontal
+Cross axis → vertical
+
+Remember:
+
+justify-content → main axis
+
+align-items → cross axis
+
+This will make sense after the next two properties.
+
+4. justify-content ⭐⭐⭐
+
+justify-content controls how flex items are distributed along the main axis.
+
+Default:
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+Items start from the left.
+
+[1] [2] [3]
+justify-content: center
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+Result:
+
+        [1] [2] [3]
+
+Items move to the center horizontally.
+
+justify-content: flex-end
+justify-content: flex-end;
+
+Result:
+
+                  [1] [2] [3]
+justify-content: space-between ⭐
+justify-content: space-between;
+
+The first item goes to the start and the last to the end, with equal free space between items:
+
+[1]           [2]           [3]
+justify-content: space-around
+justify-content: space-around;
+
+Space is distributed around each item:
+
+   [1]      [2]      [3]
+justify-content: space-evenly
+justify-content: space-evenly;
+
+Equal spacing between items and the container edges:
+
+   [1]     [2]     [3]
+5. align-items ⭐⭐⭐
+
+Now the property you were asking about earlier. 😎
+
+align-items controls the alignment of flex items on the cross axis.
+
+With the default:
+
+.container {
+    display: flex;
+    align-items: stretch;
+}
+
+Let's use a fixed-height container:
+
+.container {
+    display: flex;
+    height: 300px;
+    align-items: center;
+}
+
+Now the items move to the vertical center:
+
+┌─────────────────────────────┐
+│                             │
+│       [1] [2] [3]           │
+│                             │
+└─────────────────────────────┘
+
+That's:
+
+align-items: center;
+Common align-items values
+center
+align-items: center;
+
+Centers items on the cross axis.
+
+flex-start
+align-items: flex-start;
+
+Moves items toward the start of the cross axis.
+
+flex-end
+align-items: flex-end;
+
+Moves items toward the end.
+
+stretch
+align-items: stretch;
+
+Default behavior in many flex containers: items stretch across the cross-axis when their cross size is auto.
+
+baseline
+align-items: baseline;
+
+Aligns items based on their text baselines.
+
+6. Centering Something ⭐⭐⭐
+
+One of the most famous Flexbox techniques:
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+If the container has a height:
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+You can center content horizontally and vertically.
+
+┌──────────────────────────────┐
+│                              │
+│                              │
+│          [ CONTENT ]         │
+│                              │
+│                              │
+└──────────────────────────────┘
+
+🔥 This pattern is extremely common.
+
+7. flex-direction
+
+By default:
+
+flex-direction: row;
+
+Items go horizontally.
+
+[1] [2] [3]
+column
+flex-direction: column;
+
+Now:
+
+[1]
+
+[2]
+
+[3]
+Other values
+flex-direction: row;
+flex-direction: row-reverse;
+flex-direction: column;
+flex-direction: column-reverse;
+⭐ Important Relationship
+
+This is where many beginners get confused.
+
+If:
+
+flex-direction: row;
+
+Then:
+
+Main axis  → horizontal
+Cross axis → vertical
+
+So:
+
+justify-content
+
+controls horizontal positioning.
+
+And:
+
+align-items
+
+controls vertical positioning.
+
+But if:
+
+flex-direction: column;
+
+the axes switch:
+
+Main axis  → vertical
+Cross axis → horizontal
+
+Therefore:
+
+justify-content
+
+controls vertical positioning.
+
+And:
+
+align-items
+
+controls horizontal positioning.
+
+🔥 This concept is more important than memorizing the properties.
+
+8. gap ⭐
+
+gap creates space between flex items.
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+Result:
+
+[1] 20px [2] 20px [3]
+
+You can also use:
+
+row-gap: 20px;
+column-gap: 30px;
+
+But for normal Flexbox layouts:
+
+gap: 20px;
+
+is often enough.
+
+9. flex-wrap
+
+Normally, flex items try to stay on one line.
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+If there isn't enough space, you can allow them to move onto additional lines:
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+This is very useful for responsive card layouts.
+
+🧠 Today's Most Important Properties
+
+For now, focus heavily on these:
+
+display: flex;
+
+flex-direction: row;
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 20px;
+
+flex-wrap: wrap;
+🔥 Your First Flexbox Challenge
+
+Create:
+
+<div class="container">
+
+    <div class="box">HTML</div>
+    <div class="box">CSS</div>
+    <div class="box">JavaScript</div>
+
+</div>
+
+CSS:
+
+.container
+    width: 800px
+    height: 400px
+    border: 2px solid black
+    display: flex
+
+Now experiment yourself:
+
+Challenge 1
+
+Put the boxes in the center horizontally.
+
+Hint: use one Flexbox property.
+
+Challenge 2
+
+Put them in the center vertically.
+
+Hint: use another Flexbox property.
+
+Challenge 3
+
+Put them exactly in the center of the container.
+
+Challenge 4
+
+Change the direction from:
+
+row
+
+to:
+
+column
+
+Then observe what happens to justify-content and align-items.
+
+Challenge 5
+
+Add:
+
+gap: 30px;
+
+and see the difference.
+
+🎯 Progress
+
+We're now at:
+
+CSS Basics ✅
+Applying CSS ✅
+Selectors ✅
+Colors & Backgrounds ✅
+Units ✅
+Text & Fonts ✅
+Box Model ✅
+Width & Height ✅
+Display ✅
+Position ✅
+Flexbox ← NOW 🔥
+
+Next in Flexbox we'll go deeper into:
+
+flex-wrap → align-content → align-self → flex-grow → flex-shrink → flex-basis → order
+
+Then we'll move to CSS Grid. */
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    justify-content: flex-end;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+

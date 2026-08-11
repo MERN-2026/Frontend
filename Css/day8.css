@@ -1,0 +1,325 @@
+/* CSS Lesson 9 — Display Property
+
+The display property controls how an element behaves in the layout.
+
+This is an important topic because it prepares you for Flexbox, Grid, and layouts.
+
+The main values we'll learn:
+
+block
+inline
+inline-block
+none
+1. display: block
+
+A block element normally:
+
+Starts on a new line
+Takes the available width by default
+Allows width and height
+
+Example:
+
+<div>Box 1</div>
+<div>Box 2</div>
+<div>Box 3</div>
+
+By default, <div> is a block element.
+
+div {
+    display: block;
+}
+
+Visually:
+
+┌──────────────────────────┐
+│ Box 1                    │
+└──────────────────────────┘
+
+┌──────────────────────────┐
+│ Box 2                    │
+└──────────────────────────┘
+
+┌──────────────────────────┐
+│ Box 3                    │
+└──────────────────────────┘
+
+Common block elements:
+
+<div>
+<h1> - <h6>
+<p>
+<section>
+<header>
+<footer>
+<nav>
+<article>
+2. display: inline
+
+Inline elements normally:
+
+Stay on the same line
+Take only as much width as their content needs
+Do not behave like normal block boxes for width and height
+
+Example:
+
+<span>Hello</span>
+<span>World</span>
+<span>CSS</span>
+
+By default, <span> is inline.
+
+span {
+    display: inline;
+}
+
+They can appear like:
+
+Hello World CSS
+
+Common inline elements:
+
+<span>
+<a>
+<strong>
+<em>
+3. display: inline-block ⭐
+
+This is very useful.
+
+It combines characteristics of inline and block.
+
+An inline-block element:
+
+Can sit beside other inline/inline-block elements
+Can have width
+Can have height
+Can have padding and margins
+
+Example:
+
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+
+CSS:
+
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+
+The boxes can appear next to each other if there is enough horizontal space.
+
+This was historically used for many layouts before Flexbox became common.
+
+4. display: none ⭐
+
+This completely removes an element from the layout.
+
+Example:
+
+.box {
+    display: none;
+}
+
+The element won't be visible, and it doesn't occupy layout space.
+
+For example:
+
+<p>Hello</p>
+
+<p class="hidden">You cannot see me.</p>
+
+<p>World</p>
+.hidden {
+    display: none;
+}
+
+The result behaves approximately like:
+
+Hello
+
+World
+
+The hidden paragraph doesn't leave an empty space.
+
+5. display: none vs visibility: hidden
+
+This is important.
+
+display: none
+display: none;
+
+Element:
+
+Hidden + removed from layout.
+
+visibility: hidden
+visibility: hidden;
+
+Element:
+
+Invisible but still occupies its space.
+
+Example:
+
+display: none:
+
+Box 1
+Box 3
+
+visibility: hidden:
+
+Box 1
+[empty space]
+Box 3
+
+Remember:
+
+display: none → no space
+visibility: hidden → space remains
+
+6. Changing an Element's Default Display
+
+You can change how an element behaves.
+
+For example, normally:
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+Links are inline.
+
+You can make them block:
+
+a {
+    display: block;
+}
+
+Now each link starts on its own line.
+
+7. display and Width/Height
+
+This is an important relationship.
+
+Block
+.box {
+    display: block;
+    width: 300px;
+    height: 200px;
+}
+
+Width and height work normally.
+
+Inline
+.box {
+    display: inline;
+    width: 300px;
+    height: 200px;
+}
+
+For normal inline layout, width and height don't apply in the same way they do to block-level boxes.
+
+Inline-block
+.box {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+}
+
+Width and height work.
+
+🧠 Quick Comparison
+Display	New line?	Width/Height?	Space
+block	Yes	Yes	Full available width by default
+inline	No	Not normally	Content width
+inline-block	No	Yes	Content/declared size
+none	—	—	No layout space
+🔥 Practice Challenge
+
+Create:
+
+<div class="box box1">Box 1</div>
+<div class="box box2">Box 2</div>
+<div class="box box3">Box 3</div>
+
+<p class="hidden">You should not see me.</p>
+Step 1
+
+Make all boxes:
+
+width: 200px;
+height: 100px;
+Step 2
+
+Try:
+
+.box {
+    display: block;
+}
+
+Observe the result.
+
+Step 3
+
+Change it to:
+
+.box {
+    display: inline-block;
+}
+
+Observe the difference.
+
+Step 4
+
+Try:
+
+.hidden {
+    display: none;
+}
+
+Then replace it with:
+
+.hidden {
+    visibility: hidden;
+}
+
+Observe the difference.
+
+🎯 Progress
+
+We've completed:
+
+CSS Basics ✅
+Applying CSS ✅
+Selectors ✅
+Colors & Backgrounds ✅
+Units ✅
+Text & Fonts ✅
+Box Model ✅
+Width & Height ✅
+Display Property ← NOW ✅
+Next → CSS Positioning ⭐
+
+We'll learn:
+
+static → relative → absolute → fixed → sticky
+
+And after Position, we'll finally reach the Flexbox chapter, where you'll learn the align-items you asked about earlier. 🔥 */
+
+
+div{
+    display: block;
+    display: inline;
+    display: inline-block;
+}
+.box{
+    display: inline-block;
+    display: none;
+    visibility: hidden;
+
+}

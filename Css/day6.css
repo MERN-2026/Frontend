@@ -1,0 +1,414 @@
+/* CSS Lesson 7 — The Box Model ⭐⭐⭐
+
+The CSS Box Model is fundamental to understanding spacing and layout.
+
+Every HTML element is treated by the browser as a box.
+
+For example:
+
+<div>Hello World</div>
+
+The browser thinks of it approximately like:
+
+┌───────────────────────────────┐
+│             MARGIN            │
+│   ┌───────────────────────┐   │
+│   │        BORDER         │   │
+│   │   ┌───────────────┐   │   │
+│   │   │    PADDING    │   │   │
+│   │   │  ┌─────────┐  │   │   │
+│   │   │  │ CONTENT │  │   │   │
+│   │   │  └─────────┘  │   │   │
+│   │   └───────────────┘   │   │
+│   └───────────────────────┘   │
+└───────────────────────────────┘
+
+There are 4 main parts:
+
+Content
+Padding
+Border
+Margin
+
+Memorize this order:
+
+Content → Padding → Border → Margin
+
+1. Content
+
+Content is the actual thing inside the element.
+
+Example:
+
+<div>Hello World</div>
+
+Hello World is the content.
+
+You can control the content area's size using:
+
+div {
+    width: 300px;
+    height: 200px;
+}
+2. Padding ⭐
+
+Padding is the space between the content and the border.
+
+Example:
+
+div {
+    padding: 20px;
+}
+
+Think:
+
+        Border
+    ┌───────────────┐
+    │   ↑ padding   │
+    │    Content    │
+    │   ↓ padding   │
+    └───────────────┘
+
+Padding creates internal space.
+
+Padding on individual sides
+
+You can control each side separately:
+
+div {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}
+3. Padding Shorthand ⭐
+
+Instead of writing four properties, you can use:
+
+padding: 10px 20px 30px 40px;
+
+The order is:
+
+Top → Right → Bottom → Left
+
+Remember it as TRBL.
+
+        TOP
+         ↑
+LEFT ← element → RIGHT
+         ↓
+       BOTTOM
+Three-value shorthand
+padding: 10px 20px 30px;
+
+Means:
+
+Top    = 10px
+Right  = 20px
+Bottom = 30px
+Left   = 20px
+Two-value shorthand
+padding: 10px 20px;
+
+Means:
+
+Top    = 10px
+Bottom = 10px
+
+Left   = 20px
+Right  = 20px
+One value
+padding: 20px;
+
+All four sides become 20px.
+
+4. Border
+
+Border surrounds the padding and content.
+
+Example:
+
+div {
+    border: 2px solid black;
+}
+
+The syntax is:
+
+border: width style color;
+
+For example:
+
+border: 3px solid red;
+
+Means:
+
+3px   → width
+solid → style
+red   → color
+5. Border Styles
+
+Some common styles:
+
+border: 2px solid black;
+border: 2px dashed black;
+border: 2px dotted black;
+border: 2px double black;
+
+You'll commonly use:
+
+solid
+dashed
+dotted
+6. Border Radius ⭐
+
+This controls rounded corners.
+
+button {
+    border-radius: 10px;
+}
+
+More rounded:
+
+button {
+    border-radius: 25px;
+}
+
+Completely round for a square element:
+
+img {
+    border-radius: 50%;
+}
+
+This is commonly used for profile pictures.
+
+7. Margin ⭐⭐⭐
+
+Margin is the space outside the border.
+
+Example:
+
+div {
+    margin: 20px;
+}
+
+Think:
+
+      MARGIN
+  ┌───────────────┐
+  │    BORDER     │
+  │ ┌───────────┐ │
+  │ │  CONTENT  │ │
+  │ └───────────┘ │
+  └───────────────┘
+Key difference
+
+Padding:
+
+Space inside the element.
+
+Margin:
+
+Space outside the element.
+
+This distinction is extremely important.
+
+8. Margin Individual Sides
+
+Same as padding:
+
+div {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+9. Margin Shorthand
+margin: 10px 20px 30px 40px;
+
+Order:
+
+Top
+Right
+Bottom
+Left
+
+Exactly like padding.
+
+10. margin: auto ⭐⭐⭐
+
+This is very important.
+
+Suppose:
+
+.box {
+    width: 500px;
+    margin: auto;
+}
+
+The browser can automatically distribute the available horizontal space around the box, effectively centering it horizontally when the width allows it.
+
+This is a very common technique.
+
+11. The Complete Box Model
+
+Consider:
+
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 30px;
+}
+
+Conceptually:
+
+              MARGIN
+        ←──────────────→
+
+        ┌──────────────┐
+        │    BORDER    │
+        │  ┌────────┐  │
+        │  │PADDING │  │
+        │  │ Content│  │
+        │  │ 300px  │  │
+        │  └────────┘  │
+        └──────────────┘
+
+With the default box model, width: 300px refers to the content width, so padding and border add to the rendered size.
+
+12. box-sizing ⭐⭐⭐
+
+This property is extremely important.
+
+By default:
+
+box-sizing: content-box;
+
+A width like:
+
+width: 300px;
+padding: 20px;
+border: 5px solid black;
+
+means the total width is larger than 300px.
+
+A very common approach is:
+
+* {
+    box-sizing: border-box;
+}
+
+Now the declared width includes the element's padding and border.
+
+So:
+
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+The overall box width stays 300px.
+
+You'll see this pattern constantly in real CSS projects.
+
+🧠 Remember This
+CONTENT
+   ↓
+PADDING
+   ↓
+BORDER
+   ↓
+MARGIN
+
+And:
+
+Padding → inside
+Margin  → outside
+🔥 Practice Challenge
+
+Create:
+
+<div class="card">
+    <h1>My Portfolio</h1>
+    <p>I am learning CSS.</p>
+    <button>Contact Me</button>
+</div>
+
+CSS requirements:
+
+.card
+width: 400px
+padding: 30px
+border: 2px solid black
+margin: auto
+h1
+margin-bottom: 20px
+p
+padding: 10px
+button
+padding: 10px 20px
+border: 2px solid black
+border-radius: 10px
+Bonus 🔥
+
+Add:
+
+* {
+    box-sizing: border-box;
+}
+
+Then inspect your .card using Chrome DevTools → Inspect → Box Model.
+
+That will make the Box Model much easier to understand visually. */
+
+
+.card{
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+}
+
+/* border :width style color*/
+/* img {
+    border-radius: 50%;
+} */
+button{
+    border: 3px solid rgba(255,0,0,0.5);
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin: auto;
+}
+
+/* margin 
+
+      MARGIN
+  ┌───────────────┐
+  │    BORDER     │
+  │ ┌───────────┐ │
+  │ │  CONTENT  │ │
+  │ └───────────┘ │
+  └───────────────┘
+
+
+*/
+/* the complete box model */
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 30px;
+}
+* {
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
