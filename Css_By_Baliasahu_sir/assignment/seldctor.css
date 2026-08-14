@@ -1,0 +1,48 @@
+*{
+    margin:0;   /*Q.5 Thi is 
+    universal selector*/
+}
+
+h1{                 
+    color: red;
+}
+p{
+    color:blue;
+}
+.student{
+    color: green;
+}
+#mainTitle{
+    color: purple;
+}
+input[type="text"]{
+    background-color:violet;
+}
+[disabled]{
+    background-color: gray;
+    color: aquamarine;
+}
+a[href^="https"]{
+    color: green;
+    text-decoration: none;
+}
+a[href$=".pdf"]{
+    color: blueviolet;
+    
+}
+input[placeholder*="name"]{
+    background-color: yellow;
+    color: green;
+}
+h1,h2,p{
+    color: blue;  /*it is not best practice it is only use for assignment and already we use h1 ,p tag*/
+}
+input[type="text"] [disabled]{
+}
+
+
+
+
+
+
+

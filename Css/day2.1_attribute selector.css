@@ -1,0 +1,187 @@
+/* 🔥 CSS Attribute Selector
+
+Attribute selector ka use hum HTML element ke attributes ko target/select karne ke liye karte hain.
+
+Basic syntax:
+
+element[attribute] {
+    property: value;
+}
+
+Example:
+
+input[type] {
+    border: 1px solid black;
+}
+
+Ye un sabhi <input> elements ko select karega jinke andar type attribute exists karta hai.
+
+1️⃣ Attribute Exists Selector [attribute]
+
+Agar tumhe check karna hai ki kisi element ke andar attribute present hai ya nahi, toh:
+
+[disabled] {
+    background-color: gray;
+}
+
+HTML:
+
+<input disabled>
+<button disabled>Submit</button>
+
+Dono select honge. ✅
+
+Assignment type question:
+
+Write CSS to select every disabled element and give it a gray background.
+
+Answer:
+
+[disabled] {
+    background-color: gray;
+}
+2️⃣ Exact Attribute Value Selector [attribute="value"]
+
+Ye bahut important hai. Tumhara previous question isi type ka tha.
+
+Syntax:
+
+element[attribute="value"] {
+}
+
+Example:
+
+input[type="text"] {
+    background-color: yellow;
+}
+
+HTML:
+
+<input type="text">       <!-- ✅ selected -->
+<input type="password">  <!-- ❌ -->
+<input type="email">     <!-- ❌ -->
+
+Kyunki humne exactly bola:
+
+[type="text"]
+
+Matlab:
+
+type attribute ki value exactly "text" honi chahiye.
+
+3️⃣ Attribute Value Starts With ^=
+
+Agar attribute ki value kisi particular text se start hoti hai:
+
+a[href^="https"] {
+    color: green;
+}
+
+^= means starts with.
+
+Example:
+
+<a href="https://google.com">Google</a>     <!-- ✅ -->
+<a href="https://youtube.com">YouTube</a>   <!-- ✅ -->
+<a href="http://example.com">Example</a>    <!-- ❌ -->
+4️⃣ Attribute Value Ends With $=
+
+Agar attribute ki value kisi particular text par end hoti hai:
+
+img[src$=".jpg"] {
+    border: 2px solid black;
+}
+
+$= means ends with.
+
+Example:
+
+<img src="photo.jpg">   <!-- ✅ -->
+<img src="image.jpg">   <!-- ✅ -->
+<img src="photo.png">   <!-- ❌ -->
+5️⃣ Attribute Contains *=
+
+Agar attribute ki value ke andar kahin bhi particular text present hai:
+
+a[href*="google"] {
+    color: red;
+}
+
+*= means contains.
+
+Example:
+
+<a href="https://google.com">Google</a>        <!-- ✅ -->
+<a href="https://google.co.in">Google India</a> <!-- ✅ -->
+<a href="https://youtube.com">YouTube</a>      <!-- ❌ -->
+6️⃣ Attribute Contains Word ~=
+
+Ye thoda advanced hai.
+
+~= ka matlab hai attribute ki value mein ek complete word present hona.
+
+Example:
+
+[class~="active"] {
+    color: red;
+}
+<div class="menu active">Home</div>  <!-- ✅ -->
+<div class="active menu">About</div>  <!-- ✅ -->
+🧠 Ekdum Simple Trick
+
+Bhai ye table yaad kar lo:
+
+Selector	Meaning
+[disabled]	Attribute exists
+[type="text"]	Exact value
+[href^="https"]	Starts with
+[src$=".jpg"]	Ends with
+[href*="google"]	Contains
+[class~="active"]	Contains complete word
+Sabse important 3 pehle master karo:
+
+Exists:
+
+[disabled]
+
+Exact:
+
+input[type="text"]
+
+Starts with:
+
+a[href^="https"]
+
+Phir $= aur *= karna.
+
+🔥 Assignment mein kaise identify karna hai?
+
+Question mein agar aaye:
+
+"select elements that have a disabled attribute"
+
+→ [disabled]
+
+"select input whose type is text"
+
+→ input[type="text"]
+
+"select links whose href starts with https"
+
+→ a[href^="https"]
+
+"select images ending with .jpg"
+
+→ img[src$=".jpg"]
+
+"select links containing google"
+
+→ a[href*="google"] */
+
+
+
+[type]{
+    background-color: red;
+}
+*{
+}
