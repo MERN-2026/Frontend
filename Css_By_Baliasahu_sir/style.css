@@ -1,0 +1,27 @@
+h2{
+    color: red;
+}
+/* selector:{
+                property:value;
+            }  */
+        
+            h1{
+                color: blueviolet;
+                text-align: center;
+            }
+            button{
+                color: red;
+            }
+p{
+    color: brown;
+}
+p{
+    color: blue;
+}
+
+/* it is go from top to button 
+    like :-
+    inline
+    internal
+    external
+*/
