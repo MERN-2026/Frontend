@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors Day 2 Practice</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        section {
+            border: 1px solid gray;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+
+        /* =========================
+           Q1 - Descendant Selector
+           ========================= */
+
+        .q1 div p {
+            color: blue;
+        }
+
+
+        /* =========================
+           Q2 - Child Selector
+           ========================= */
+
+        .q2 div > p {
+            color: red;
+        }
+
+
+        /* =========================
+           Q4 - Adjacent Sibling
+           ========================= */
+
+        .q4 h2 + p {
+            color: red;
+        }
+
+
+        /* =========================
+           Q6 - General Sibling
+           ========================= */
+
+        .q6 h2 ~ p {
+            color: blue;
+        }
+
+
+        /* =========================
+           Q8 - Hover
+           ========================= */
+
+        .q8 button:hover {
+            background-color: blue;
+            color: white;
+        }
+
+
+        /* =========================
+           Q9 - Focus
+           ========================= */
+
+        .q9 input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+
+        /* =========================
+           Q10 - First Child
+           ========================= */
+
+        .q10 li:first-child {
+            color: red;
+        }
+
+
+        /* =========================
+           Q11 - Last Child
+           ========================= */
+
+        .q11 p:last-child {
+            color: green;
+        }
+
+
+        /* =========================
+           Q12 - nth-child
+           ========================= */
+
+        .q12 li:nth-child(2) {
+            color: red;
+        }
+
+
+        /* =========================
+           Q13 - Odd / Even
+           ========================= */
+
+        .q13 li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        .q13 li:nth-child(even) {
+            background-color: lightblue;
+        }
+
+
+        /* =========================
+           Q14 - Disabled
+           ========================= */
+
+        .q14 button:disabled {
+            background-color: gray;
+            color: white;
+        }
+
+
+        /* =========================
+           Q15 - Checked
+           ========================= */
+
+        .q15 input:checked {
+            accent-color: green;
+        }
+
+
+        /* =========================
+           Q16 - First Letter
+           ========================= */
+
+        .q16 p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           Q17 - First Line
+           ========================= */
+
+        .q17 p::first-line {
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           Q18 - Before
+           ========================= */
+
+        .q18 h2::before {
+            content: "★ ";
+        }
+
+
+        /* =========================
+           Q19 - After
+           ========================= */
+
+        .q19 h2::after {
+            content: " ✓";
+        }
+
+
+        /* =========================
+           Q21 - Combined Challenge
+           ========================= */
+
+        .q21 .course-list p {
+            color: blue;
+        }
+
+        .q21 .course-list > li {
+            margin: 8px 0;
+        }
+
+        .q21 h2 + p {
+            font-weight: bold;
+        }
+
+        .q21 h2 ~ p {
+            margin-left: 10px;
+        }
+
+        .q21 button:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .q21 li:nth-child(2) {
+            color: red;
+        }
+
+        .q21 h2::before {
+            content: "★ ";
+        }
+
+        .q21 h2::after {
+            content: " ✓";
+        }
+
+
+        /* =========================
+           MINI ASSIGNMENT
+           ========================= */
+
+        .course-page .course-list p {
+            color: darkblue;
+        }
+
+        .course-page .course-list > li {
+            margin-bottom: 10px;
+        }
+
+        .course-page h2 + p {
+            font-weight: bold;
+        }
+
+        .course-page h2 ~ p {
+            margin-left: 10px;
+        }
+
+        .course-page input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+        .course-page li:nth-child(2) {
+            color: red;
+        }
+
+        .course-page button:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .course-page h2::before {
+            content: "★ ";
+        }
+
+        .course-page h2::after {
+            content: " ✓";
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1>CSS Selectors - Day 2 Practice</h1>
+
+
+    <!-- =========================
+         Q1
+         ========================= -->
+
+    <section class="q1">
+
+        <h2>Q1. Descendant Selector</h2>
+
+        <div>
+
+            <p>Paragraph inside div - selected</p>
+
+            <section>
+
+                <p>
+                    Nested paragraph inside div - also selected
+                </p>
+
+            </section>
+
+        </div>
+
+        <p>
+            Paragraph outside div - not selected
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q2
+         ========================= -->
+
+    <section class="q2">
+
+        <h2>Q2. Child Selector</h2>
+
+        <div>
+
+            <p>
+                Direct child paragraph - selected
+            </p>
+
+            <section>
+
+                <p>
+                    Nested paragraph - not selected
+                </p>
+
+            </section>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q3
+         ========================= -->
+
+    <section>
+
+        <h2>Q3. Descendant vs Child</h2>
+
+        <p>
+            <strong>div p:</strong>
+            selects any paragraph inside div at any level.
+        </p>
+
+        <p>
+            <strong>div &gt; p:</strong>
+            selects only direct paragraph children of div.
+        </p>
+
+        <div>
+
+            <p>
+                Direct paragraph
+            </p>
+
+            <section>
+
+                <p>
+                    Nested paragraph
+                </p>
+
+            </section>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q4
+         ========================= -->
+
+    <section class="q4">
+
+        <h2>Q4. Adjacent Sibling</h2>
+
+        <h2>Heading</h2>
+
+        <p>
+            First paragraph - selected
+        </p>
+
+        <p>
+            Second paragraph - not selected
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q5
+         ========================= -->
+
+    <section>
+
+        <h2>Q5. Adjacent Sibling Reasoning</h2>
+
+        <h2>Heading</h2>
+
+        <div>
+            Div is between h2 and p
+        </div>
+
+        <p>
+            This paragraph is NOT selected by h2 + p.
+        </p>
+
+        <p>
+            Reason: paragraph is not immediately after h2.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q6
+         ========================= -->
+
+    <section class="q6">
+
+        <h2>Q6. General Sibling</h2>
+
+        <h2>Heading</h2>
+
+        <p>
+            First paragraph - selected
+        </p>
+
+        <p>
+            Second paragraph - selected
+        </p>
+
+        <div>
+            Another element
+        </div>
+
+        <p>
+            Third paragraph - selected
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q7
+         ========================= -->
+
+    <section>
+
+        <h2>Q7. + vs ~</h2>
+
+        <p>
+            <strong>h2 + p:</strong>
+            selects only the immediately next matching sibling.
+        </p>
+
+        <p>
+            <strong>h2 ~ p:</strong>
+            selects all matching siblings after h2.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q8
+         ========================= -->
+
+    <section class="q8">
+
+        <h2>Q8. Hover</h2>
+
+        <button>
+            Move Mouse Over Me
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q9
+         ========================= -->
+
+    <section class="q9">
+
+        <h2>Q9. Focus</h2>
+
+        <input
+            type="text"
+            placeholder="Click here and type"
+        >
+
+    </section>
+
+
+
+    <!-- =========================
+         Q10
+         ========================= -->
+
+    <section class="q10">
+
+        <h2>Q10. First Child</h2>
+
+        <ul>
+
+            <li>
+                First item - red
+            </li>
+
+            <li>
+                Second item
+            </li>
+
+            <li>
+                Third item
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q11
+         ========================= -->
+
+    <section class="q11">
+
+        <h2>Q11. Last Child</h2>
+
+        <div>
+
+            <p>
+                First paragraph
+            </p>
+
+            <p>
+                Second paragraph
+            </p>
+
+            <p>
+                Last paragraph - green
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q12
+         ========================= -->
+
+    <section class="q12">
+
+        <h2>Q12. nth-child</h2>
+
+        <ul>
+
+            <li>Java</li>
+
+            <li>Python - red</li>
+
+            <li>SQL</li>
+
+            <li>HTML</li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q13
+         ========================= -->
+
+    <section class="q13">
+
+        <h2>Q13. Odd / Even</h2>
+
+        <ul>
+
+            <li>Item 1 - odd</li>
+
+            <li>Item 2 - even</li>
+
+            <li>Item 3 - odd</li>
+
+            <li>Item 4 - even</li>
+
+            <li>Item 5 - odd</li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q14
+         ========================= -->
+
+    <section class="q14">
+
+        <h2>Q14. Disabled</h2>
+
+        <button disabled>
+            Disabled Button
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q15
+         ========================= -->
+
+    <section class="q15">
+
+        <h2>Q15. Checked</h2>
+
+        <label>
+
+            <input
+                type="checkbox"
+                checked
+            >
+
+            I agree
+
+        </label>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q16
+         ========================= -->
+
+    <section class="q16">
+
+        <h2>Q16. ::first-letter</h2>
+
+        <p>
+            This paragraph has a larger and bold first letter.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q17
+         ========================= -->
+
+    <section class="q17">
+
+        <h2>Q17. ::first-line</h2>
+
+        <p>
+            This is the first line of the paragraph and it will be bold.
+            This is more text added so the paragraph can continue to another line.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q18
+         ========================= -->
+
+    <section class="q18">
+
+        <h2>Courses</h2>
+
+        <p>
+            A star is added before the heading.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q19
+         ========================= -->
+
+    <section class="q19">
+
+        <h2>Courses</h2>
+
+        <p>
+            A check mark is added after the heading.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q20
+         ========================= -->
+
+    <section>
+
+        <h2>Q20. :hover vs ::before</h2>
+
+        <p>
+            <strong>:hover</strong>
+            works when the mouse is over an element.
+        </p>
+
+        <p>
+            <strong>::before</strong>
+            adds generated content before an element's content.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q21
+         ========================= -->
+
+    <section class="q21">
+
+        <h2>Q21. Combined Challenge</h2>
+
+        <p>
+            Java Course
+        </p>
+
+        <ul class="course-list">
+
+            <li>
+
+                Java
+
+                <p>
+                    Java description inside li.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                Python
+
+                <p>
+                    Python description inside li.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                SQL
+
+                <p>
+                    SQL description inside li.
+                </p>
+
+            </li>
+
+        </ul>
+
+
+        <button>
+            Enroll Now
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         Q22
+         ========================= -->
+
+    <section>
+
+        <h2>Q22. Debugging</h2>
+
+        <div>
+
+            <p>
+                Direct paragraph
+            </p>
+
+            <section>
+
+                <p>
+                    Nested paragraph
+                </p>
+
+            </section>
+
+        </div>
+
+        <p>
+            div &gt; p selects only direct p children.
+            If nested paragraphs should also be selected,
+            use div p.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         MINI ASSIGNMENT
+         ========================= -->
+
+    <section class="course-page">
+
+        <h2>Mini Assignment - Course Page</h2>
+
+        <p>
+            Welcome to our course page.
+        </p>
+
+
+        <ul class="course-list">
+
+            <li>
+
+                HTML
+
+                <p>
+                    Learn the structure of webpages.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                CSS
+
+                <p>
+                    Learn how to style webpages.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                JavaScript
+
+                <p>
+                    Learn how to add functionality to webpages.
+                </p>
+
+            </li>
+
+        </ul>
+
+
+        <label>
+
+            Your Name:
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+            >
+
+        </label>
+
+
+        <br><br>
+
+
+        <label>
+
+            <input type="checkbox">
+
+            I am ready to learn
+
+        </label>
+
+
+        <br><br>
+
+
+        <button>
+            Enroll Course
+        </button>
+
+    </section>
+
+</body>
+</html>

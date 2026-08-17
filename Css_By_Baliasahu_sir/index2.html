@@ -4,10 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        /* .desc p{
+            color: red;
+        } */
+        /* .desc >p{    Child Selector
+            color: red;
+        } */
+         /* h2+p{
+            color: blueviolet;
+         } */
+         /* h2 ~ p{
+            color: blueviolet;   general  sibling selector
+         } */
+        /* .btn{
+            border-radius: 20px;
+            width: 200px;
+
+        }
+        .btn:hover{
+            background-color: aqua;  pseudo selector
+        } */
+        /* #inp:focus{
+            border: 3px solid red;
+        } */
+        /* p:first-child{
+            color: blueviolet;
+        }
+        p:last-child{
+            color: blue;
+        }
+        p:nth-child(2){
+            color: brown;
+            background-color:aqua;
+        } */
+
+        p:nth-child(odd){
+            color: blue;
+        }
+        p:nth-child(even){
+            color: rgb(81, 255, 0);
+        }
+        p::first-letter{
+            color: aqua;
+        }
+        p::first-line{
+            color: blue;
+        }
+        h2::before{
+            content: "*";
+        }
+        h2::after{
+            content: "*";
+        }
+     </style>
 </head>
 <body>
-    <h2>I LOVE CSS</h2>
-    <p>CASCADING STYLE SHEETS</p>
+    <h2>Amru</h2>
+    <br><br><hr>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum rerum deleniti sapiente ad atque, modi obcaecati pariatur et ducimus reiciendis nobis minima! Recusandae deserunt tempora cumque neque quidem necessitatibus nihil?</p>
+    <br><br><hr>
+    <div>
+        <p>Hi</p>
+        <p>Hilo</p>
+        <p>Hi</p>
+        <p>Hi</p>
+    </div>
+    <div>
+        <p>Hi</p>
+        <p>Hi</p>
+        <p>Hi</p>
+        <p>Hi</p>
+    </div>
+    <br><br><hr>
+     <div class="desc">     <!-- Descendant Selector  -->
+        <h2>Narendra</h2>      <!-- adjacent sbling chcter +  -->
+         <p>Surendra Reddy</p> <!-- ~ general  sibling selector -->
+        <p>Kishor</p>
+        <div>
+            <p>Vasu</p>  
+        </div>
+         <p>Dheeraj</p>   <!--Child Selector >  -->
+    </div>
+    <br><br><hr>
+    <button class="btn">
+        Verify it's you
+    </button>
+
+    <br><br><hr>
+    <h1>Focus</h1>
+    <br>
+    <input type="text" placeholder="Enter your name">
+    <br><br>
 </body>
 </html>
