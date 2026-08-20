@@ -1,0 +1,23 @@
+/*formula   
+selector{
+     property:value;
+}'
+
+{ } → Declaration block
+
+: → Property aur value ko separate karta hai
+
+; → Declaration ko end karta hai
+*/
+h1{
+    color: red;   
+    font-size: 40px;
+}
+p{
+    color: blue;
+    font-size: 20px;
+}
+button{
+    color: white;
+    background-color: green;
+}
