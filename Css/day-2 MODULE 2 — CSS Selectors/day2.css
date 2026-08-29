@@ -1,0 +1,46 @@
+/* * {
+    color: red;
+}
+h1 {
+    color: red;
+} */
+
+/* .title {
+  color: green;
+} */
+
+/* #main-heading {
+    color: blue;
+} */
+
+/* h1,p,button{
+  color: red;
+} */
+
+/* input[type]{
+  color: red;
+} */
+
+/* input[value="text"]{
+  color: blue;
+} */
+
+/* input[title~="enter"]{
+  color: aqua;
+} */
+
+/* p[class|="main"]{
+  color: red;
+} */
+
+/* a[href^="https"]{
+  color: green;
+} */
+ 
+/* input[placeholder$="name"]{
+  color: red;
+} */
+
+/* a[alt*="of"]{
+  color: green;
+} */

@@ -1,0 +1,27 @@
+CSS SELECTORS
+│
+├── Basic
+│   ├── Universal *
+│   ├── Element
+│   ├── Class .
+│   ├── ID #
+│   └── Grouping ,
+│
+├── Attribute
+│   ├── [attr]
+│   ├── [attr="x"]
+│   ├── [attr~="x"]
+│   ├── [attr|="x"]
+│   ├── [attr^="x"]
+│   ├── [attr$="x"]
+│   └── [attr*="x"]
+│
+├── Combinators
+│   ├── Descendant (space)
+│   ├── Child >
+│   ├── Adjacent Sibling +
+│   └── General Sibling ~
+│
+└── Pseudo
+    ├── Pseudo-class :
+    └── Pseudo-element ::
