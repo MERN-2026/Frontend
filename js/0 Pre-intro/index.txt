@@ -1,0 +1,185 @@
+        date:-31-08-2026
+
+
+JavaScript Assignment
+
+ 1. What is JavaScript (JS)?
+
+**JavaScript (JS)** is a high-level, interpreted programming language mainly used to make web pages **interactive, dynamic, and functional**.
+
+It is one of the three main technologies of web development:
+
+* **HTML** – Structure of the webpage
+* **CSS** – Design and styling of the webpage
+* **JavaScript** – Functionality and behavior of the webpage
+
+**Example:** When we click a button and something happens on a webpage, JavaScript is often responsible for that action.
+
+---
+
+ 2. Where does JavaScript run?
+
+JavaScript can run in different environments.
+
+**1. Browser:**
+JavaScript runs inside web browsers using a **JavaScript engine**.
+
+Examples:
+
+* Google Chrome → **V8**
+* Microsoft Edge → **V8**
+* Firefox → **SpiderMonkey**
+* Safari → **JavaScriptCore**
+
+**2. Server:**
+JavaScript can also run on the server using environments such as **Node.js**, which uses the V8 JavaScript engine.
+
+So, JavaScript can be used for both **frontend and backend development**.
+
+---
+
+ 3. What is the syntax of JavaScript?
+
+**Syntax** means the set of rules used to write JavaScript code correctly.
+
+Example:
+
+```javascript
+let name = "Amrutanshu";
+
+console.log("Hello " + name);
+```
+
+Another example:
+
+```javascript
+if (age >= 18) {
+    console.log("You are eligible.");
+}
+```
+
+Important parts of JavaScript syntax include:
+
+* Variables
+* Keywords
+* Operators
+* Statements
+* Functions
+* Conditions
+* Loops
+* Objects
+* Comments
+
+JavaScript statements are commonly written one after another, and a semicolon `;` can be used to terminate a statement.
+
+---
+
+ 4. What is the difference between JavaScript and Java?
+
+JavaScript and Java are **different programming languages**. Their names are similar, but they are not the same language.
+
+| JavaScript                                                   |                                                                               |
+| ------------------------------------------------------------------JAVA --------------------------------------------------------------------------------- |
+| Mainly used for web development and interactive applications | General-purpose programming language used for many types of applications          |
+| Commonly runs in browsers and JavaScript runtimes            | Runs on the Java Virtual Machine (JVM)                                            |
+| Dynamically typed                                            | Statically typed                                                                  |
+| Uses prototype-based object model                            | Uses class-based object model                                                     |
+| Commonly used with HTML and CSS                              | Commonly used for enterprise software, Android development, backend systems, etc. |
+| File extension is `.js`                                      | File extension is `.java`                                                         |
+                                                       |
+
+**In short:** JavaScript and Java are completely different languages despite their similar names.
+
+---
+
+ 5. What can JavaScript do?
+
+JavaScript can perform many tasks on websites and applications.
+
+It can:
+
+1. Make webpages **interactive**.
+2. Change HTML content dynamically.
+3. Change CSS styles dynamically.
+4. Handle user events such as **click, typing, mouse movement**, etc.
+5. Validate forms.
+6. Create animations and interactive UI components.
+7. Display alerts and messages.
+8. Communicate with servers and APIs.
+9. Create web applications.
+10. Build backend applications using Node.js.
+11. Create games and browser-based applications.
+12. Store and manage data in the browser using features such as local storage.
+
+**Example:**
+
+```javascript
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+```
+
+This JavaScript code changes the content of an HTML element.
+
+---
+
+ 6. What is a search engine? What are the uses of a search engine? List some search engines.
+
+A **search engine** is a software system that helps users **find information on the internet** by entering keywords or search queries.
+
+**Uses of a search engine:**
+
+* Finding websites
+* Finding information about different topics
+* Searching for images
+* Searching for videos
+* Finding news and articles
+* Finding maps and locations
+* Finding products and services
+* Finding educational resources
+
+**Examples of search engines:**
+
+1. Google
+2. Bing
+3. Yahoo
+4. DuckDuckGo
+5. Baidu
+6. Yandex
+
+**Example:**
+If we search **"JavaScript tutorial"** on Google, the search engine displays webpages and other relevant resources related to JavaScript.
+
+---
+
+ 7. What is the need for JavaScript?
+
+JavaScript is needed because **HTML and CSS alone cannot provide complete interactive functionality** to modern webpages.
+
+* **HTML** creates the structure.
+* **CSS** provides the design.
+* **JavaScript** adds behavior and functionality.
+
+JavaScript is needed to:
+
+1. Make websites interactive.
+2. Respond to user actions.
+3. Validate user input.
+4. Update webpage content without manually refreshing the page.
+5. Create dynamic web applications.
+6. Handle events such as clicks and keyboard input.
+7. Communicate with servers and APIs.
+8. Create animations and interactive components.
+9. Build both frontend and backend applications.
+
+ Conclusion
+
+**JavaScript is an important programming language for modern web development.** It adds functionality and interactivity to webpages and can also be used to build complete applications on both the client side and server side.
+
+
+what is varibale
+a varibale is container that stores a value . it allows you to refrence and manipulate that, such as nummbers , strings, objects, and more . In js , you can declare
+
+syntax of varibale declaration:
+
+types of Variables:-
+1. var: used to declare a varibale , function-scoped , can be re-declared and update.
+

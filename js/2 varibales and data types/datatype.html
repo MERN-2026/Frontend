@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//        in js  7 Primitive Data Types there:
+
+// String
+// Number
+// BigInt
+// Boolean
+// Undefined
+// Null
+// Symbol
+let name = "Amrut";
+let city = "Bangalore";
+let message = "Hello Bhai";
+let age = 22;
+let bigNumber = 12345678901234567890n;
+let isStudent = true;
+let isLoggedIn = false;
+let result;
+let selectedUser = null;
+let id = Symbol("id");
+
+let student = {
+    name: "Amrut",
+    age: 22,
+    city: "Bangalore"
+};
+
+// Single value → Primitive
+// Multiple related values → Non-Primitive / Object
+
+// “An object is a non-primitive data type used to store multiple related values as key-value pairs.”
+
+
+
+
+// typeof Operator
+
+let nae = "Amru";
+console.log(typeof nae)
+
+// Type Conversion
+let ag = "22";
+
+let agi=Number("22");
+console.log(agi);
+console.log(typeof agi);
+
+
+// Type Coercion
+
+let resut = "10" + 20;
+
+console.log(resut);
+
+let resul = "10" - 2;
+
+console.log(resul);
+
+
+
+// Scope of Variables
+
+// global scope
+
+let nme="Amru";
+console.log(nme);
+
+//functional scope
+
+function test(){
+    let age=22;
+    console.log(age);
+}
+
+//block scope
+if (true){
+    let age=22;
+    console.log(age);
+}
+
+
+
+
+    </script>
+</body>
+</html>
