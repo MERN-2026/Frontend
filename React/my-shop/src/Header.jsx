@@ -1,5 +1,6 @@
 import { ShoppingCart, User , Search } from "lucide-react";
 import Logo from './components/layout/logo';
+
 function Header(){
     
 return(
